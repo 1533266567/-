@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script type="text/javascript" src="echarts.common.min.js"></script> -->
+	<script type="text/javascript" src="echarts.js"></script>
+</head>
+<body>
+		<div id="main" style="width: 600px;height:400px;"></div>
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('main'));
+		    // var option = {
+	     //        title: {
+	     //            text: 'ECharts 入门示例'
+	     //        },
+	     //        tooltip: {},
+	     //        legend: {
+	     //            data:['销量']
+	     //        },
+	     //        xAxis: {
+	     //            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+	     //        },
+	     //        yAxis: {},
+	     //        series: [{
+	     //            name: '销量',
+	     //            type: 'bar',
+	     //            data: [5, 20, 36, 10, 10, 20]
+	     //        }]
+	     //    };
+	        var option = {
+	        	 	xAxis: {
+				        data: ['Jul.24', 'Jul.25', '9:00', '10:00','11:00']
+				    },
+				    yAxis: {
+				    	scale: true,    //坐标刻度不强制包含零刻度
+				    	type: 'value',
+				    	data: [1222.0, 1223.0, 1224.0, 1225.0,1226.0,1227.0]
+				    },
+				    series: [{
+				        type: 'k',
+				        data: [
+				            [1223.8,1224.2,1223.6,1224.3],
+				            [1224.4,1224.5,1224.2,1224.7],
+				            [1225.3,1225.6,1224.7,1225.8],
+				        ]
+				    }],
+				    itemStyle: {
+				    	color: {
+						    type: 'linear',
+						    x: 0,
+						    y: 0,
+						    x2: 0,
+						    y2: 1,
+						    colorStops: [{
+						        offset: 0, color: '#000' // 0% 处的颜色
+						    }, {
+						        offset: 1, color: '#fff' // 100% 处的颜色
+						    }],
+						    globalCoord: true // 缺省为 false
+						}
+				    }
+		        }
+
+			myChart.setOption(option,true);
+		</script>
+</body>
+</html>

@@ -10,14 +10,14 @@
     <title>Document</title>
     <meta name="keywords" content="">
 	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
 	<link rel="stylesheet" href="css/main.css" />
-	<!-- <link rel="stylesheet" href="css/main.css" /> -->
 </head>
 <body>
 	<!-- 头部 -->
 	<div class="header">
 		<div class="header-content clearfix">
-			<div class="logo fl">
+			<div class="logo">
 				<img src="images/logo.png" alt="" />
 			</div>
 			<div class="nav-bar fl">
@@ -36,27 +36,216 @@
 					</li>
 				</ul>
 			</div>
-			<div class="account fl">
+			<div class="account fr">
 				<a href="" class="account-btn">开立账户</a>
-				<p class="language">
-					<a href="" class="lan-active">简/</a>
-					<a href="">繁/</a>
-					<a href="">EN</a>
-				</p>
+			</div>
+			<div class="language">
+				<a href="" class="lan-active">简/</a>
+				<a href="">繁/</a>
+				<a href="">EN</a>
 			</div>
 		</div>
 	</div>
 	<!-- 轮播 -->
 	<div class="broadcast">
-
+		<div id="slider" class="flexslider ">  
+			<ul class="slides">
+				<li class="images">
+					<a href="">
+						<img src="images/home/banner.png" />
+					</a>
+				</li>
+				<li class="images">
+					<a href="">
+						<img src="images/home/banner.png" />
+					</a>
+				</li>
+				<li class="images">
+					<a href="">
+						<img src="images/home/banner.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<!-- 内容 -->
-	<div class="main"></div>
+	<div class="main">
+		<div class="quotation">
+			<h2>实时行情</h2>
+		</div>
+		<div class="download">
+			<h2>平台下载</h2>
+			<div class="download-main clearfix">
+				<div class="download-pic fl">
+					<img src="images/home/download.png">
+				</div>
+				<div class="download-text fl">
+					<p>MT4交易平台全称MetaTrader4，由MetaQuotes软件
+					公司研发除了提供实时行情和交易功能外，还包括18种
+					画线工具、9个交易时段图表选项、30种国际领先技术指
+					标和声音预警提示。用户可进行下单、平仓、限价单、止
+					赢、查看实时新闻、公告、预警、查看报表，以及数据分
+					析和处理等操作。</p>
+					<a href="" class="download-link">MT4交易软件下载</a>
+				</div>
+			</div>
+		</div>
+		<div class="information">
+			<h2>新闻资讯</h2>
+			<ul class="info-main clearfix">
+				<li class="calendar fl">
+					<div class="calendar-title">
+						<h3>财经日历</h3>
+						<a href="" class="more">更多</a>
+					</div>
+					<div class="calendar-main">
+						<ul class="calendar-detail clearfix">
+							<li class="calendar-active">
+								<span>07.25</span>
+								<span>星期三</span>
+							</li>
+							<li>
+								<span>07.26</span>
+								<span>星期四</span>
+							</li>
+							<li>
+								<span>07.27</span>
+								<span>星期五</span>
+							</li>
+							<li>
+								<span>07.28</span>
+								<span>星期六</span>
+							</li>
+							<li>
+								<span>07.29</span>
+								<span>星期日</span>
+							</li>
+						</ul>
+						<div class="info-detail">
+							<ul>
+								<li class="clearfix">
+									<div class="circular fl">
+										<span></span>
+									</div>
+									<div class="info-time fl">07:50</div>
+									<div class="info-data fl">
+										<p>6月企业服务价格指数月率（%）</p>
+										<span class="forecast">预测值：---</span>
+										<span>公布值：0.2</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="circular fl">
+										<span></span>
+									</div>
+									<div class="info-time fl">07:50</div>
+									<div class="info-data fl">
+										<p>6月企业服务价格指数月率（%）</p>
+										<span class="forecast">预测值：---</span>
+										<span>公布值：0.2</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="circular fl">
+										<span></span>
+									</div>
+									<div class="info-time fl">07:50</div>
+									<div class="info-data fl">
+										<p>6月企业服务价格指数月率（%）</p>
+										<span class="forecast">预测值：---</span>
+										<span>公布值：0.2</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="hot-info fr">
+					<div class="hot-info-title">
+						<h3>热门资讯</h3>
+						<a href="" class="more">更多</a>
+					</div>
+					<ul class="hot-info-main">
+						<li class="clearfix">
+							<div class="hot-info-pic fl">
+								<img src="images/home/new1.png">
+							</div>
+							<div class="hot-info-detail fl">
+								<p>中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格</p>
+								<span>2017.07.26  16:11</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="hot-info-pic fl">
+								<img src="images/home/new2.png">
+							</div>
+							<div class="hot-info-detail fl">
+								<p>中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格</p>
+								<span>2017.07.26  16:11</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="hot-info-pic fl">
+								<img src="images/home/new1.png">
+							</div>
+							<div class="hot-info-detail fl">
+								<p>中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格,中东油路面临新安全困境，原油价格</p>
+								<span>2017.07.26  16:11</span>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<!-- 底部 -->
-	<div class="footer"></div>
+	<div class="footer">
+		<div class="footer-inline clearfix">
+			<div class="tip fl">
+				<h4>
+					<i class="icon"></i>风险提示
+				</h4>
+				<p> 贵金属买卖涉及潜在的利润与损失，若买卖情况不利，损失有可能
+					超过最初保证金的金额。贵金属买卖的价位波动受全球性的多种因
+					素所影响。这些因素许多是难以预计的，贵金属价格的剧烈波动可
+					能导致投资者无法把失利的买卖结算。文传的职员虽然不断注意市
+					况，但他们并不能作出任何预测准确性的保证，也不能保证任何损
+					失不超过一定的金额。</p>
+			</div>
+			<div class="notes fl">
+				<h4>客户须知</h4>
+				<ul>
+					<li><a href="">隐私条款</a></li>
+					<li><a href="">条款及细则</a></li>
+					<li><a href="">免责说明</a></li>
+					<li><a href="">争端处理</a></li>
+				</ul>
+			</div>
+			<div class="contact fl">
+				<h4>联系我们</h4>
+				<ul>
+					<li>电话：</li>
+					<li>邮箱：</li>
+					<li>地址：</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		  $(".flexslider").flexslider({
+            slideshow: true,
+            slideshowSpeed: 4000, //展示时间间隔ms
+            animationSpeed: 1000, //滚动时间ms
+            animation: "fade",
+            directionNav: true,
+            touch: true //是否支持触屏滑动
+        });
+	})
+</script>
 </body>
 
 </html>
