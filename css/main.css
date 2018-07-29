@@ -116,6 +116,9 @@ textarea::-webkit-input-placeholder {
 
 
 /*首页*/
+.wrap1000 {
+	width: 100%;
+}
 .header {
 	width: 100%;
 	max-width: 1920px;
@@ -123,39 +126,49 @@ textarea::-webkit-input-placeholder {
 	margin: 0 auto;
 }
 .header-content {
-	padding: 0 45px;
-	height: 150px;
+	height: 90px;
+	width: 1200px;
+	margin: 0 auto;
 }
 .logo {
 	width: 312px;
 	height: 105px;
-	position: absolute;
+	margin-top: 20px;
+	/*position: absolute;
 	left: 80px;
-	top: 22px;
+	top: 22px;*/
 }
 .logo img {
 	width: 100%;
 	height: 100%;
 }
 .nav-bar {
-	margin-left: 530px;
+	width: 710px;
+	padding-left: 60px;
+	margin: 0 auto;
 }
+.nav-bar ul {
+	width: 100%;
+}
+
 .nav-bar li {
 	float: left;
-	padding: 0 18px;
+	width: 25%;
+}
+.nav-bar li:last-child {
+	padding: 0px;
 }
 .nav-bar li > a  {
 	display: block;
-	padding: 0 30px;
+	width: 100%;
 	position: relative;
 	color: #333;
 	font-size: 32px;
 	line-height: 150px;
+	text-align: center;
 }
 .account {
-	position: relative;
-	margin-top: 42px;
-	padding-right: 130px;
+	margin-top: 20px;
 }
 .account .account-btn {
 	display: block;
@@ -172,19 +185,23 @@ textarea::-webkit-input-placeholder {
 	font-size: 32px;
 }
 .language {
-	position: absolute;
-	right: 45px;
-	bottom: 27px;
+	margin-top: 50px;
+	margin-left: 10px;
 	font-size: 20px;
 }
+.broadcast ,
+.flexslider {
+	width: 100%;
+	margin: 0 auto;
+}
 .main {
+	margin: 0 auto;
 	overflow: hidden;
 }
 .main,.quotation,
 .download,.information{
 	margin: 0 auto;
 }
-.main,
 .download {
 	width: 100%;
 }
@@ -208,8 +225,8 @@ textarea::-webkit-input-placeholder {
 	margin-top: 90px;
 }
 .download-text {
-	margin-left: 46px;
-	width: 48%;
+	margin-left: 43px;
+	width: 46%;
 	margin-top: 46px;
 }
 .download-text > p {
@@ -337,8 +354,8 @@ textarea::-webkit-input-placeholder {
 	margin-right: 75px;
 }
 .hot-info {
-	width: 50%;
-	margin-left: 138px;
+	width: 49%;
+	margin-left: 130px;
 }
 .hot-info-title {
 	width: 100%;
@@ -380,7 +397,7 @@ textarea::-webkit-input-placeholder {
 }
 .footer {
 	background: #002e40;
-	width: 100%;
+	margin:  0 auto;
 	margin-bottom: 3px;
 }
 .footer-inline {
@@ -391,7 +408,7 @@ textarea::-webkit-input-placeholder {
 	font-size: 38px;
 }
 .tip {
-	width: 677px;
+	width: 33%;
 	padding-left: 60px;
 	position: relative;
 	margin-right: 205px;
@@ -497,8 +514,8 @@ textarea::-webkit-input-placeholder {
 	margin-left: 5px;
 }
 #charts {
-	width:700px;
-	height:400px;
+	width: 600px;
+    height: 400px;
 }
 
 #circle {
@@ -538,16 +555,9 @@ textarea::-webkit-input-placeholder {
 		height: 67px;
 		top: 15px;
 	}
-	.nav-bar {
-		margin-left: 300px;
-	}
 	.nav-bar li > a {
 		font-size: 20px;
 		line-height: 100px;
-	}
-	.account  {
-		margin-top: 28px;
-		padding-right: 100px;
 	}
 	.account .account-btn {
 		width: 100px;
@@ -570,9 +580,6 @@ textarea::-webkit-input-placeholder {
 	}
 	.download {
 		padding: 50px 80px 60px;
-	}
-	.download-text {
-		/*width: 530px;*/
 	}
 	.download-text > p {
 		font-size: 20px;
@@ -643,7 +650,6 @@ textarea::-webkit-input-placeholder {
 		font-size: 24px;
 	}
 	.tip {
-		width: 420px;
 		margin-right: 190px;
 	}
 	.footer-inline {
@@ -663,10 +669,7 @@ textarea::-webkit-input-placeholder {
 	.contact li {
 		font-size: 16px;
 	}
-	#charts {
-		width: 600px;
-		height: 400px;
-	}
+	
 	#circle {
 		width: 280px;
 		height: 400px;
@@ -709,5 +712,14 @@ textarea::-webkit-input-placeholder {
 	.marquee li {
 		line-height: 40px;
 		font-size: 20px;
+	} 
+}
+@media screen and (max-width: 1024px) {
+	.wrap1000 {
+		width: 1200px;
+	}
+	#charts {
+		width: 480px;
+		height: 400px;
 	}
 }
