@@ -258,7 +258,7 @@ textarea::-webkit-input-placeholder {
 	margin-top: 70px;
 }
 .calendar {
-	width: 41%;
+	width: 43%;
 }
 .calendar-title {
 	width: 100%;
@@ -354,8 +354,8 @@ textarea::-webkit-input-placeholder {
 	margin-right: 75px;
 }
 .hot-info {
-	width: 49%;
-	margin-left: 130px;
+	width: 48%;
+	margin-left: 120px;
 }
 .hot-info-title {
 	width: 100%;
@@ -596,7 +596,7 @@ textarea::-webkit-input-placeholder {
 		padding: 0 80px 60px;
 	}
 	.hot-info {
-		margin-left: 80px;
+		margin-left: 60px;
 	}
 	.calendar-title > h3, .hot-info-title > h3 {
 		font-size: 28px;
