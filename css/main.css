@@ -121,18 +121,19 @@ textarea::-webkit-input-placeholder {
 }
 .header {
 	width: 100%;
-	max-width: 1920px;
+	min-width: 1200px;
 	position: relative;
 	margin: 0 auto;
 }
 .header-content {
-	height: 90px;
+	height: 85px;
 	width: 1200px;
 	margin: 0 auto;
+	position: relative;
 }
 .logo {
-	width: 312px;
-	height: 105px;
+	width: 155px;
+	height: 52px;
 	margin-top: 20px;
 	/*position: absolute;
 	left: 80px;
@@ -143,7 +144,7 @@ textarea::-webkit-input-placeholder {
 	height: 100%;
 }
 .nav-bar {
-	width: 710px;
+	width: 960px;
 	padding-left: 60px;
 	margin: 0 auto;
 }
@@ -153,46 +154,53 @@ textarea::-webkit-input-placeholder {
 
 .nav-bar li {
 	float: left;
-	width: 25%;
+	width: 160px;
+	padding-left: 20px;
 }
 .nav-bar li:last-child {
-	padding: 0px;
+	padding-left: 20px;
 }
 .nav-bar li > a  {
 	display: block;
 	width: 100%;
 	position: relative;
 	color: #333;
-	font-size: 32px;
-	line-height: 150px;
+	font-size: 18px;
+	line-height: 85px;
 	text-align: center;
 }
 .account {
-	margin-top: 20px;
+	position: absolute;
+	right: 75px;
+	top: 24px;
 }
 .account .account-btn {
 	display: block;
-	width: 156px;
-	height: 76px;
+	width: 80px;
+	height: 40px;
 	border: 1px solid #cc2e37;
 	color: #cc2e37;
-	line-height: 76px;
+	line-height: 40px;
 	text-align: center;
 	-webkit-border-radius: 6px;
 	-ms-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	font-size: 32px;
+	font-size: 16px;
 }
 .language {
-	margin-top: 50px;
-	margin-left: 10px;
-	font-size: 20px;
+	position: absolute;
+	font-size: 14px;
+	right: 2px;
+	bottom: 18px;
 }
 .broadcast ,
 .flexslider {
 	width: 100%;
 	margin: 0 auto;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
 }
 .main {
 	margin: 0 auto;
@@ -203,16 +211,14 @@ textarea::-webkit-input-placeholder {
 	margin: 0 auto;
 }
 .download {
-	width: 100%;
+	width: 1200px;
+	margin: 60px auto;
 }
 .main h2 {
 	width: 100%;
 	text-align: center;
-	font-size: 52px;
+	font-size: 32px;
 	color: #cc2e37;
-}
-.download {
-	padding: 76px 112px 112px;
 }
 .download-pic {
 	width: 48%;
@@ -225,26 +231,25 @@ textarea::-webkit-input-placeholder {
 	margin-top: 90px;
 }
 .download-text {
-	margin-left: 43px;
-	width: 46%;
+	width: 48%;
 	margin-top: 46px;
 }
 .download-text > p {
 	text-indent: 2em;
 	color: #333;
-	font-size: 28px;
-	line-height: 1.8;
+	font-size: 18px;
+	line-height: 2;
 }
 .download-link {
 	display: block;
-	margin: 90px auto;
-	width: 492px;
-	height: 92px;
+	margin: 50px auto;
+	width: 380px;
+	height: 75px;
 	border: 2px solid #cd2c24;
 	color: #ce3840;
-	font-size: 38px;
+	font-size: 22px;
 	text-align: center;
-	line-height: 92px;
+	line-height: 75px;
 	-webkit-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -252,13 +257,14 @@ textarea::-webkit-input-placeholder {
 }
 .information {
 	margin-top: 60px;
-	padding: 0 110px 150px;
+	margin-bottom: 120px;
+	width: 1200px;
 }
 .info-main {
 	margin-top: 70px;
 }
 .calendar {
-	width: 43%;
+	width: 46%;
 }
 .calendar-title {
 	width: 100%;
@@ -269,7 +275,7 @@ textarea::-webkit-input-placeholder {
 	color: #999;
 	font-size: 26px;
 	position: absolute;
-	right: 5px;
+	right: 36px;
 	top: 10px;
 }
 .calendar-title .more::after,
@@ -277,12 +283,12 @@ textarea::-webkit-input-placeholder {
 	position: absolute;
 	content: '>>';
 	top: 5px;
-	left: 60px;
+	left: 45px;
 }
 .calendar-title > h3,
 .hot-info-title > h3 {
 	color: #002e40;
-	font-size: 40px;
+	font-size: 26px;
 }
 .calendar-detail {
 	margin-top: 48px;
@@ -310,7 +316,7 @@ textarea::-webkit-input-placeholder {
 	width: 100%;
 }
 .info-detail li {
-	padding: 27px 0;
+	padding: 20px 0;
 	color: #333;
 	border-bottom: 1px solid #d2d2d2;
 	padding-left: 28px;
@@ -342,7 +348,7 @@ textarea::-webkit-input-placeholder {
 }
 .info-time {
 	padding: 0 45px;
-	font-size: 26px;
+	font-size: 18px;
 }
 .info-data {
 	font-size: 26px;
@@ -355,7 +361,6 @@ textarea::-webkit-input-placeholder {
 }
 .hot-info {
 	width: 48%;
-	margin-left: 120px;
 }
 .hot-info-title {
 	width: 100%;
@@ -399,6 +404,8 @@ textarea::-webkit-input-placeholder {
 	background: #002e40;
 	margin:  0 auto;
 	margin-bottom: 3px;
+	width: 100%;
+	min-width: 1200px;
 }
 .footer-inline {
 	padding: 40px 0 0 100px;
@@ -547,30 +554,6 @@ textarea::-webkit-input-placeholder {
 	color: #cd2c24;
 }
 @media screen and (max-width: 1400px) {
-	.header-content {
-		height: 100px;
-	}
-	.logo {
-		width: 200px;
-		height: 67px;
-		top: 15px;
-	}
-	.nav-bar li > a {
-		font-size: 20px;
-		line-height: 100px;
-	}
-	.account .account-btn {
-		width: 100px;
-		height: 50px;
-		font-size: 16px;
-		line-height: 50px;
-	}
-	.language {
-		font-size: 14px;
-	}
-	.main h2 {
-		font-size: 32px;
-	}
 	.download-main {
 		margin-top: 50px;
 	}
@@ -578,34 +561,8 @@ textarea::-webkit-input-placeholder {
 		/*width: 600px;*/
 		height: auto;
 	}
-	.download {
-		padding: 50px 80px 60px;
-	}
-	.download-text > p {
-		font-size: 20px;
-	}
-	.download-link {
-		margin: 50px auto;
-		width: 400px;
-		height: 80px;
-		line-height: 80px;
-		font-size: 28px;
-	}
-	.information {
-		margin-top: 0px;
-		padding: 0 80px 60px;
-	}
-	.hot-info {
-		margin-left: 60px;
-	}
-	.calendar-title > h3, .hot-info-title > h3 {
-		font-size: 28px;
-	}
 	.calendar-title .more, .hot-info-title .more{
 		font-size: 18px;
-	}
-	.calendar-title .more::after, .hot-info-title .more::after{
-		left: 42px;
 	}
 	.calendar-detail li > span {
 		font-size: 18px;
@@ -622,12 +579,6 @@ textarea::-webkit-input-placeholder {
 	}
 	.info-main {
 		margin-top: 40px;
-	}
-	.info-detail li {
-		padding-left: 13px;
-	}
-	.info-time {
-		font-size: 18px;
 	}
 	.info-data {
 		font-size: 18px;
