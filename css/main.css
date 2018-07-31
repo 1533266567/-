@@ -408,40 +408,43 @@ textarea::-webkit-input-placeholder {
 	min-width: 1200px;
 }
 .footer-inline {
-	padding: 40px 0 0 100px;
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 40px;
+	/*padding: 40px 0 0 100px;*/
 }
 .footer-inline h4 {
 	color: #fff;
-	font-size: 38px;
+	font-size: 28px;
 }
 .tip {
-	width: 33%;
+	width: 45%;
 	padding-left: 60px;
 	position: relative;
-	margin-right: 205px;
+	margin-right: 130px;
 }
 .icon {
 	display: inline-block;
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	height: 30px;
 	background: url(../images/home/tip.png) no-repeat;
 	background-size: contain;
 	position: absolute;
-	left: 0px;
-	top: 0px;  
+	left: 13px;
+	top: 6px;  
 }
 .tip > p {
 	margin-top: 10px;
 	color: #999;
-	font-size: 22px;
-	line-height: 1.8;
+	font-size: 16px;
+	line-height: 2;
 }
 .notes {
 	margin-right: 200px;
 }
 .notes ul,
 .contact ul {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 .notes li a{
 	display: block;
@@ -596,25 +599,6 @@ textarea::-webkit-input-placeholder {
 	}
 	.hot-info-main li {
 		padding-bottom: 23px;
-	}
-	.footer-inline h4 {
-		font-size: 24px;
-	}
-	.tip {
-		margin-right: 190px;
-	}
-	.footer-inline {
-		padding: 40px 0 0 60px;
-	}
-	.icon {
-		width: 30px;
-		height: 30px;
-		left: 16px;
-		top: 5px;
-	}
-	.tip > p {
-		font-size: 16px;
-		line-height: 2.2;
 	}
 	.notes li a,
 	.contact li {
