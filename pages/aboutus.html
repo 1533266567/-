@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>关于我们</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>关于我们</title>
+    <meta name="keywords" content="">
+	<meta name="description" content=""> 
+	<link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
-	<div>
-		<div></div>
-		<div>
-
+	<div class="header" id="header"></div>
+	<div class="about-us w1200 clearfix">
+		<div class="left-colum">
+			<ul class="about-lists">
+				<li class="active"><a href="">公司简介</a></li>
+				<li><a href="">每日动态</a></li>
+				<li><a href="">报道公告</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+			<ul class="download-list">
+				<li><a href="">下载中心</a></li>
+				<li><a href="" class="down-arrow">平台下载</a></li>
+				<li><a href="" class="down-arrow">平台下载</a></li>
+			</ul>
 		</div>
-		<div>
-
+		<div class="about-content">
+			<h2>公司简介</h2>
+			<div class="content-word">
+				<div class="company-pic">
+					<img src="../images/aboutus/companyLogo.png" alt="">
+				</div>
+				<p>文傳金銀主要經營貴金屬網上交易，包括倫敦黃金、倫敦白銀及黃金實貨貿易。文傳金銀與多家國際知名的企業都有很密切的合作關係，如：新業行（金號）有限公司、賀利氏有限公司、張氏金業有限公司、香港天鑫洋股份有限公司及金協貴金屬（香港）有限公司等。</p>
+				<p>文傳金銀扎根香港，由行業內三十多年經驗的管理層負責營運，一直秉承守法合規，專業嚴謹的宗旨，提供一個最優質的環境最讓客戶安心交易</p>
+				<p>文傳金銀有專業強大的講師團隊並由多名國內外知名的分析師帶領，盡心盡力為每一位客戶提供服務，配合穩定的交易系統讓客戶每分每秒都可緊貼市場，捕捉交易機會。</p>
+			</div>
 		</div>
 	</div>
+	<div class="footer" id="footer"></div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		 $('#header').load('../common/header.html');
+		 $('#footer').load('../common/footer.html');
+	})
+
+</script>
 </body>
 </html>
