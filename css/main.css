@@ -46,7 +46,8 @@ a{
 	color:#666;
 }
 a:hover{
-	text-decoration:none; color:#f00f12;
+	text-decoration:none;
+	color:#f00f12;
 }
 a:focus,input,button,select,textarea{
 	outline:none;
@@ -55,6 +56,9 @@ h1,h2,h3,h4,h5,h6{
 	font-size:100%; 
  	font-variant: normal;
  	font-weight: normal;
+}
+p {
+	font-weight: normal;
 }
 input,select,img{ 
 	vertical-align:middle;
@@ -123,7 +127,6 @@ textarea::-webkit-input-placeholder {
 	box-shadow: 0px 5px 6px #e5e5e5; 
 }
 
-
 /*首页*/
 .wrap1000 {
 	width: 100%;
@@ -177,7 +180,7 @@ textarea::-webkit-input-placeholder {
 	width: 100%;
 	position: relative;
 	color: #333;
-	font-size: 24px;
+	font-size: 26px;
 	line-height: 110px;
 	text-align: center;
 }
@@ -433,7 +436,7 @@ textarea::-webkit-input-placeholder {
 	width: 45%;
 	padding-left: 60px;
 	position: relative;
-	margin-right: 90px;
+	margin-right: 75px;
 }
 .tip-icon {
 	display: inline-block;
@@ -472,7 +475,7 @@ textarea::-webkit-input-placeholder {
 	line-height: 2;
 }
 .notes {
-	margin-right: 135px;
+	margin-right: 125px;
 	padding-left: 60px;
 	position: relative;
 }
@@ -490,6 +493,7 @@ textarea::-webkit-input-placeholder {
 	color: #999;
 	font-size: 16px;
 	padding-bottom: 20px;
+	width: 220px;
 }
 .contact {
 	padding-left: 60px;
@@ -622,7 +626,7 @@ textarea::-webkit-input-placeholder {
 .about-lists li a,
 .download-list li a {
 	color: #333;
-	font-size: 20px;
+	font-size: 22px;
 	width: 100%;
 	display: block;
 }
@@ -674,17 +678,17 @@ textarea::-webkit-input-placeholder {
 .about-content {
 	float: right;
 	width: 900px;
-	margin-bottom: 300px;
 }
 .about-content h2 {
-	font-size: 30px;
+	font-size: 34px;
 	color: #333;
-	font-weight: 700;
-	padding-bottom: 26px;
-	border-bottom: 1px solid #bfbfbf;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #e5e5e5;
 }
 .company-pic {
-	width: 240px;
+	width: 306px;
+	height: 230px;
 	margin: 0 auto;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -692,10 +696,84 @@ textarea::-webkit-input-placeholder {
 }
 .company-pic img {
 	width: 100%;
-	display: block;
+	display: block; 
+}
+.content-word  {
+	margin-bottom: 277px;
 }
 .content-word p {
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 2.4;
 	text-indent: 2em;
+}
+.about-banner {
+	width: 100%;
+	height: 285px;
+	overflow: hidden;
+}
+.about-banner img {
+	display: block;
+	width: 100%;
+}
+.dynamic-list {
+	width: 100%;
+	margin-bottom: 113px;
+}
+.dynamic-list li {
+	width: 100%;
+	padding-left: 10px;
+	border-top: 1px solid #e5e5e5; 
+	border-bottom: 1px solid #e5e5e5; 
+}
+.dynamic-list li:first-child {
+	border-top: 1px solid #e5e5e5; 
+}
+.dynamic-list li:last-child {
+	border-bottom: 2px solid #e5e5e5; 
+}
+.dynamic-link {
+	float: left;
+	display: block;
+	height: 80px;
+	line-height: 80px;
+	font-size: 24px;
+	color: #333;
+}
+.dynamic-time {
+	float: right;
+	display: block;
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #999
+}
+.dynamic-list .news-top {
+	position: relative;
+	padding-left: 70px;
+	height: 80px;
+}
+.dynamic-link:after {
+	position: absolute;
+	display: block;
+	left: 10px;
+	top: 26px;
+	content: 'TOP';
+	width: 42px;
+	height: 26px;
+	line-height: 26px;
+	border: 2px solid #cd2c24;
+	font-size: 14px;
+	color: #cd2c24;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.connect-way {
+	width: 100%;
+}
+.connect-way h5 {
+	color: #333;
+	font-size: 22px;
+	padding: 50px 30px;
 }
