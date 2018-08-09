@@ -212,6 +212,9 @@ textarea::-webkit-input-placeholder {
 	font-size: 21px;
 	color: #333;
 }
+.about-list a:hover {
+	color:#f00f12;
+}
 .account {
 	position: absolute;
 	right: 95px;

@@ -79,6 +79,12 @@
 		</div>
 
 		<div class="about-content none">
+			<div style="font-size: 36px;">
+				正在等待UI的设计图中。。。。。。。
+			</div>
+		</div>
+
+		<div class="about-content none">
 			<div class="about-banner">
 				<img src="../images/aboutus/topBanner.png" alt="" />
 			</div>
@@ -118,6 +124,27 @@
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
 
+		 var noeIndex = 0;
+		 var type = window.location.search.split('=')[1];
+		 switch(type) {
+		 	case 'introduc':
+		 		noeIndex = 0;
+		 		break;
+		 	case 'advantage':
+		 		noeIndex = 1;
+		 		break
+		 	case 'dynamic':
+		 		noeIndex = 2;
+		 		break
+		 	case 'contact':
+		 		noeIndex = 3;
+		 		break
+		 }
+
+		 $('.about-lists li').eq(noeIndex).addClass('active').siblings('li').removeClass('active');
+		 $('.about-content').eq(noeIndex).removeClass('none').siblings('.about-content').addClass('none');
+
+
 		 $('.about-lists li').on('click',function() {
 		 	var index = $(this).index();
 		 	console.log(index);
@@ -125,8 +152,7 @@
 		 	$('.about-content').eq(index).removeClass('none').siblings('.about-content').addClass('none');
 		 })
 
-
-	})
+		})
 
 </script>
 </body>
