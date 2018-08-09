@@ -6,8 +6,14 @@
 	</div>
 	<div class="nav-bar fl">
 		<ul class="clearfix">
-			<li>
+			<li class="about-link">
 				<a href="/pages/aboutus.html">关于文传</a>
+				<div class="about-list clearfix">
+					<a href="">公司简介</a>
+					<a href="">公司优势</a>
+					<a href="" class="mt10">公告动态</a>
+					<a href="" class="mt10">联系我们</a>
+				</div>
 			</li>
 			<li>
 				<a href="">数据中心</a>
@@ -29,3 +35,19 @@
 		<a href="" class="account-btn">开立账户</a>
 	</div>
 </div>
+<script type="text/javascript">
+	$(function() {
+		$('.nav-bar li').hover(function() {
+			$(this).children('a').addClass('on');
+		},function() {
+			$(this).children('a').removeClass('on');
+		});
+
+		$('.about-link').hover(function() {
+			$('.about-list').show();
+		},function() {
+			$('.about-list').hide();
+		});
+
+	})
+</script>

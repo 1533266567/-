@@ -171,6 +171,7 @@ textarea::-webkit-input-placeholder {
 	float: left;
 	width: 160px;
 	padding-left: 20px;
+	z-index: 10;
 }
 .nav-bar li:last-child {
 	padding-left: 20px;
@@ -183,6 +184,33 @@ textarea::-webkit-input-placeholder {
 	font-size: 26px;
 	line-height: 110px;
 	text-align: center;
+}
+.nav-bar .on {
+	background: #cd2c24;
+	color: #fff;
+}
+.about-link {
+	position: relative;
+}
+.about-list {
+	display: none;
+	position: absolute;
+	width: 360px;
+	height: 160px;
+	padding: 0 14px;
+	background: #fff;
+	-moz-box-shadow: 1px 3px 8px 1px #e5e5e5; 
+	-webkit-box-shadow: 1px 3px 8px 1px #e5e5e5; 
+	box-shadow: 1px 3px 8px 1px #e5e5e5; 
+}
+.about-list a {
+	display: block;
+	float: left;
+	padding-left: 27px;
+	padding-right: 54px;
+	padding-top: 30px; 
+	font-size: 21px;
+	color: #333;
 }
 .account {
 	position: absolute;
@@ -621,7 +649,6 @@ textarea::-webkit-input-placeholder {
 	line-height: 78px;
 	text-align: right;
 	border-bottom: 1px solid #e5e5e5;
-	padding-right: 50px;
 }
 .about-lists li a,
 .download-list li a {
@@ -629,10 +656,13 @@ textarea::-webkit-input-placeholder {
 	font-size: 22px;
 	width: 100%;
 	display: block;
+	padding-right: 50px;
 }
 .about-lists .active {
-	color: #cd2c24;
 	position: relative;
+}
+.about-lists .active a {
+	color: #cd2c24;
 }
 .about-lists .active:after {
 	content: '';
@@ -726,7 +756,7 @@ textarea::-webkit-input-placeholder {
 	border-bottom: 1px solid #e5e5e5; 
 }
 .dynamic-list li:first-child {
-	border-top: 1px solid #e5e5e5; 
+	border-top: 0px; 
 }
 .dynamic-list li:last-child {
 	border-bottom: 2px solid #e5e5e5; 
@@ -747,12 +777,12 @@ textarea::-webkit-input-placeholder {
 	font-size: 16px;
 	color: #999
 }
-.dynamic-list .news-top {
+.news-top .dynamic-link {
 	position: relative;
 	padding-left: 70px;
 	height: 80px;
 }
-.dynamic-link:after {
+.news-top .dynamic-link:after {
 	position: absolute;
 	display: block;
 	left: 10px;
@@ -771,9 +801,64 @@ textarea::-webkit-input-placeholder {
 }
 .connect-way {
 	width: 100%;
+	margin-bottom: 228px;
 }
 .connect-way h5 {
 	color: #333;
 	font-size: 22px;
 	padding: 50px 30px;
+}
+.connect {
+	width: 100%;
+}
+.connect li {
+	float: left;
+	margin-right: 90px;
+	width: 240px;
+	height: 240px;
+	background: #f8f8f8;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.connect li:last-child {
+	margin-right: 0;
+}
+.email-logo,
+.phone-logo,
+.server-logo {
+	width: 100px;
+	height: 99px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.phone-logo {
+	width: 98px;
+	height: 99px;
+}
+.server-logo {
+	width: 88px;
+	height: 99px;
+}
+.email-logo img,
+.phone-logo img,
+.server-logo img {
+	display: block;
+	width: 100%;
+}
+.connect p {
+	color: #333;
+	font-size: 24px;
+	width: 100%;
+	text-align: center;
+	padding-top: 22px;
+}
+.connect span {
+	display: block;
+	width: 100%;
+	color: #999;
+	font-size: 18px;
+	text-align: center;
+	padding-top: 12px;
 }

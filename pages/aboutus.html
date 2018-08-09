@@ -12,10 +12,10 @@
 	<div class="about-us w1200 clearfix">
 		<div class="left-colum">
 			<ul class="about-lists">
-				<li class="active"><a href="">公司简介</a></li>
-				<li><a href="">每日动态</a></li>
-				<li><a href="">报道公告</a></li>
-				<li><a href="">联系我们</a></li>
+				<li class="active"><a href="javascript:;">公司简介</a></li>
+				<li><a href="javascript:;">公告动态</a></li>
+				<li><a href="javascript:;">公司优势</a></li>
+				<li><a href="javascript:;">联系我们</a></li>
 			</ul>
 			<ul class="download-list">
 				<li><a href="">下载中心</a></li>
@@ -41,7 +41,7 @@
 			<div class="about-banner">
 				<img src="../images/aboutus/topBanner.png" alt="" />
 			</div>
-			<h2>公司简介</h2>
+			<h2>公告动态</h2>
 			<ul class="dynamic-list">
 				<li class="news-top clearfix">
 					<a href="" class="dynamic-link">非农就业数据公布前市况温馨提示</a>
@@ -85,9 +85,27 @@
 			<h2>联系我们</h2>
 			<div class="connect-way">
 				<h5>如果您对我们的产品或服务有任何疑问，请随时通过以下的联系方式与我们取得联系。</h5>
-				<ul>
+				<ul class="connect clearfix">
 					<li>
-						
+						<div class="email-logo">
+							<img src="../images/aboutus/email.png">
+						</div>
+						<p>电子邮件</p>
+						<span>info@wcjy.hk</span>
+					</li>
+					<li>
+						<div class="phone-logo">
+							<img src="../images/aboutus/phone.png">
+						</div>
+						<p>联系电话</p>
+						<span>+852 38963610</span>
+					</li>
+					<li>
+						<div class="server-logo" >
+							<img src="../images/aboutus/server.png">
+						</div>
+						<p>在线客服</p>
+						<span></span>
 					</li>
 				</ul>
 			</div>
@@ -99,6 +117,15 @@
 	$(function() {
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
+
+		 $('.about-lists li').on('click',function() {
+		 	var index = $(this).index();
+		 	console.log(index);
+		 	$(this).addClass('active').siblings('li').removeClass('active');
+		 	$('.about-content').eq(index).removeClass('none').siblings('.about-content').addClass('none');
+		 })
+
+
 	})
 
 </script>
