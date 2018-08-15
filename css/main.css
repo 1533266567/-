@@ -126,6 +126,9 @@ textarea::-webkit-input-placeholder {
 	-webkit-box-shadow: 0px 5px 6px #e5e5e5; 
 	box-shadow: 0px 5px 6px #e5e5e5; 
 }
+.header-on {
+	color: #cd2c24;
+}
 
 /*首页*/
 .wrap1000 {
@@ -642,10 +645,10 @@ textarea::-webkit-input-placeholder {
 .left-colum {
 	float: left;
 }
-.about-lists {
+.colum-lists {
 	border-top: 1px solid #e5e5e5;
 }
-.about-lists li,
+.colum-lists li,
 .download-list li {
 	width: 240px;
 	height: 78px;
@@ -653,7 +656,7 @@ textarea::-webkit-input-placeholder {
 	text-align: right;
 	border-bottom: 1px solid #e5e5e5;
 }
-.about-lists li a,
+.colum-lists li a,
 .download-list li a {
 	color: #333;
 	font-size: 22px;
@@ -661,13 +664,13 @@ textarea::-webkit-input-placeholder {
 	display: block;
 	padding-right: 50px;
 }
-.about-lists .active {
+.colum-lists .active {
 	position: relative;
 }
-.about-lists .active a {
+.colum-lists .active a {
 	color: #cd2c24;
 }
-.about-lists .active:after {
+.colum-lists .active:after {
 	content: '';
 	position: absolute;
 	right: 0px;
@@ -708,11 +711,11 @@ textarea::-webkit-input-placeholder {
 	top: 33px;
 }
 
-.about-content {
+.content {
 	float: right;
 	width: 900px;
 }
-.about-content h2 {
+.content h2 {
 	font-size: 34px;
 	color: #333;
 	padding-top: 50px;
@@ -739,12 +742,12 @@ textarea::-webkit-input-placeholder {
 	line-height: 2.4;
 	text-indent: 2em;
 }
-.about-banner {
+.content-banner {
 	width: 100%;
 	height: 285px;
 	overflow: hidden;
 }
-.about-banner img {
+.content-banner img {
 	display: block;
 	width: 100%;
 }
@@ -864,4 +867,61 @@ textarea::-webkit-input-placeholder {
 	font-size: 18px;
 	text-align: center;
 	padding-top: 12px;
+}
+
+/*行情图表*/
+.data-main {
+	padding-top: 95px;
+}
+.skill-list {
+	width: 100%;
+	margin-bottom: 83px;
+}
+.skill-content {
+	padding: 40px 0 40px 20px;
+	border-top: 1px solid #e5e5e5; 
+	border-bottom: 1px solid #e5e5e5; 
+}
+.skill-list li:first-child {
+	border-top: 0px; 
+}
+.skill-list li:last-child {
+	border-bottom: 2px solid #e5e5e5; 
+}
+.skill-pic {
+	float: left;
+	width: 180px;
+	height: 120px;
+	overflow: hidden;
+}
+.skill-pic img {
+	width: 100%;
+	display: block;
+}
+.skill-word {
+	float: right;
+	width: 680px;
+}
+.skill-word h5 {
+	width: 100%;
+	font-size: 30px;
+	color: #333;
+	padding-bottom: 20px;
+}
+.skill-word p {
+	width: 100%;
+	font-size: 22px;
+	color: #999;
+}
+.blank-block {
+	width: 890px;
+	height: 260px;
+	margin-bottom: 60px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 20px 5px #e5e5e5; 
+	box-shadow: 0px 0px 20px 5px #e5e5e5; 
+}
+.blank-list div:first-child {
+	margin-top: 40px;
 }
