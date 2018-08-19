@@ -1,0 +1,74 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>开立账户</title>
+    <meta name="keywords" content="">
+	<meta name="description" content=""> 
+	<link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+	<div class="header shadow-bottom" id="header"></div>
+	<div class="account-wrap">
+		<div class="company-pic .m-auto">
+			<img src="../images/accountLogo.png" alt="" />
+		</div>
+		<form action="" class="account-form">
+			<div class="account-name account-info">
+				<span>姓名</span>
+				<input type="text" />
+			</div>
+			<div class="account-info">
+				<span>邮箱</span>
+				<input type="text" />
+			</div>
+			<div class="account-phone">
+				<span>手机</span>
+				<select name="" id="">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+				</select>
+				<input type="text" />
+			</div>
+			<div class="account-info account-code">
+				<span>邀请码</span>
+				<input type="text" />
+			</div>
+			<div class="account-identity">
+				<span>上传身份信息</span>
+				<div class="identity-front">
+					<input type="file" class="file-f-btn" />
+					<img src="" alt="" />
+					<p>点击上传身份证正反面照片</p>
+				</div>
+			</div>
+			<div class="account-card">
+				<span>上传银行卡</span>
+				<div class="card-font">
+					<input type="file" class="card-f-btn" />
+					<img src="" alt="" />
+					<p>点击上传身银行卡正面照片</p>
+				</div>
+			</div>
+			<div class="account-regulations">
+				<input type="checkbox" class="check-box"/>
+				<div class="regulations-detail">本人已阅读、了解并接受<a href="">《客户协议书》</a><a href="">《风险披露》</a><a href="">《隐私条款》</a></div>
+			</div>
+			<div class="submit-btn">
+				<button>立即注册</button>
+			</div>
+		</form>
+	</div>
+	<div class="footer" id="footer"></div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		 $('#header').load('../common/header.html');
+		 $('#footer').load('../common/footer.html');
+
+
+	})
+
+</script>
+</body>
