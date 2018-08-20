@@ -24,7 +24,7 @@
 				<li><a href="" class="down-arrow">表格下载</a></li>
 			</ul>
 		</div>
-		<div class="content">
+		<div class="content none">
 			<h2 class="p-t-0">热门资讯</h2>
 			<ul>
 				<li class="skill-content clearfix info-item">
@@ -111,7 +111,7 @@
 				<a href="" class="back-arrow"></a>
 			</div>
 		</div>
-		<div class="content none">
+		<div class="content">
 			<h2 class="p-t-0">专家评论</h2>
 			<div class="expert">
 				<h4>专家团队</h4>
@@ -382,71 +382,88 @@
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
 
-		 // var mySwiper = new Swiper('.swiper-container', {
-		 //     slidesPerView: 'auto',
-   //           spaceBetween: 0,
-   //           initialSlide: 1,
-   //           slideActiveClass : 'swiper-slide-active',
-   //  		  navigation: {
-			//     nextEl: '.swiper-button-next',
-			//     prevEl: '.swiper-button-prev',
-			//   },
-		 // })
-
 		 $('.colum-lists li').on('click',function() {
 		 	var index = $(this).index();
 		 	$(this).addClass('active').siblings('li').removeClass('active');
 		 	$('.content').eq(index).removeClass('none').siblings('.content').addClass('none');
 		 })
-
-		 var num = 0;
-		 $('.expert-next-btn').on('click',function() {
-		 	console.log($('.expert-detail').length);
-		 	console.log(num);
-		 	if(num < $('.expert-detail').length) {
-		 		num++;
-		 	}else {
-		 		num = 0;
-		 	}
-		 	var singleWidth = $('.expert-detail').eq(0).width();
-		 	var leftLength = num* -singleWidth+ 'px'
-		 	var len = $('.finance-date').length;
-		 	$('.expert-list').animate({'left':leftLength},300);
-		 	return false;
-		 })
-		 $('.expert-pre-btn').on('click',function() {
-		 	if( num > 0 ) {
-		 		num = num-1;
-		 	}else {
-		 		num = $('.expert-detail').length;
-		 	}
-		 	var singleWidth = $('.expert-detail').eq(0).width();
-		 	var leftLength = num* -singleWidth+ 'px'
-		 	$('.expert-list').animate({'left':leftLength},300);
+		 $('.finance-date').on('click',function() {
+		 	$(this).addClass('on').siblings('li').removeClass('on');
 		 })
 
-
-
+		 //专家轮播
+		 var positionArr = [];
 		 function initExpert() {
 		 	var len = $('.expert-detail').length;
-			$('.expert-detail').eq(1).addClass('isActive');
 		 	var width = 0;
+			$('.expert-detail').eq(1).addClass('isActive');
+
 		 	for(var i = 0;i< len; i++) {
 		 		width += $('.expert-detail').eq(i).outerWidth(true);
+		 	} 
+			$('.expert-list').width(width);
+
+		 	for( var j = 0;j < len; j++ ) {
+		 		var obj = {};
+		 		var left = $('.expert-detail').eq(j).position().left;
+		 		obj.left = left;
+		 		if( j==1 ) {
+		 			obj.active = true;
+		 		} else {
+		 			obj.active = false;
+		 		}
+		 		positionArr.push(obj);
 		 	}
-		 	$('.expert-list').width(width);
+
+		 	for( var k=0;k<len;k++ ) {	 		
+		 		$('.expert-detail').eq(k).css({
+		 			'left':positionArr[k].left,
+		 			'position':'absolute'
+		 		})
+		 	}
 		 	
 		 }
 		 initExpert(); 
 
+		 $('.expert-pre-btn').on('click',function() {
+		 	positionArr.push(positionArr[0]);
+			positionArr.shift();
+			var length = $('.expert-detail').length;
+			for( var i=0;i<length;i++ ) {
+				if( positionArr[i].active ) {
+					$('.expert-detail').eq(i).addClass('isActive')
+				}else {
+					$('.expert-detail').eq(i).removeClass('isActive');
+				}
+				$('.expert-detail').eq(i).stop(true, true).animate({ 'left':positionArr[i].left },300)
+			}
+			return false;
+		 })
+		 $('.expert-next-btn').on('click',function() {
+		 	positionArr.unshift(positionArr[positionArr.length-1]);
+			positionArr.pop();
+			var length = $('.expert-detail').length;
+			for( var i=0;i<length;i++ ) {
+				if( positionArr[i].active ) {
+					$('.expert-detail').eq(i).addClass('isActive')
+				}else {
+					$('.expert-detail').eq(i).removeClass('isActive');
+				}
+				$('.expert-detail').eq(i).stop(true, true).animate({ 'left':positionArr[i].left },300)
+			}
+			return false;
+		 })
+
+
+		 //日历轮播
 		 $('.button-next').on('click',function() {
 		 	var len = $('.finance-date').length;
 		 	var left = $('.finance-date').eq(len-1).width();
-		 	$('.calendar-container ul').animate({'left':-left},300);
+		 	$('.calendar-container ul').stop().animate({'left':-left},300);
 		 })
 
 		 $('.button-prev').on('click',function() {;
-		 	$('.calendar-container ul').animate({'left':0},300);
+		 	$('.calendar-container ul').stop().animate({'left':0},300);
 		 })
 
 		function initCalendar() {

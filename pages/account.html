@@ -10,36 +10,36 @@
 <body>
 	<div class="header shadow-bottom" id="header"></div>
 	<div class="account-wrap">
-		<div class="company-pic .m-auto">
+		<div class="account-pic m-auto">
 			<img src="../images/accountLogo.png" alt="" />
 		</div>
 		<form action="" class="account-form">
 			<div class="account-name account-info">
 				<span>姓名</span>
-				<input type="text" />
+				<input type="text" name="name"/>
 			</div>
 			<div class="account-info">
 				<span>邮箱</span>
-				<input type="text" />
+				<input type="text" name="email"/>
 			</div>
 			<div class="account-phone">
 				<span>手机</span>
-				<select name="" id="">
+				<select name="" id="" name="quhao">
 					<option value="">1</option>
 					<option value="">2</option>
 					<option value="">3</option>
 				</select>
-				<input type="text" />
+				<input type="text" name="phone" />
 			</div>
 			<div class="account-info account-code">
 				<span>邀请码</span>
-				<input type="text" />
+				<input type="text" name="code"/>
 			</div>
 			<div class="account-identity">
 				<span>上传身份信息</span>
 				<div class="identity-front">
-					<input type="file" class="file-f-btn" />
-					<img src="" alt="" />
+					<input type="file" class="file-f-btn" name="id" multiple />
+					<img src="" alt="" class="identity-img"/>
 					<p>点击上传身份证正反面照片</p>
 				</div>
 			</div>
@@ -48,15 +48,15 @@
 				<div class="card-font">
 					<input type="file" class="card-f-btn" />
 					<img src="" alt="" />
-					<p>点击上传身银行卡正面照片</p>
+					<p>点击上传身银行卡正反面照片</p>
 				</div>
 			</div>
 			<div class="account-regulations">
-				<input type="checkbox" class="check-box"/>
+				<input type="checkbox" name="check" class="check-box"/>
 				<div class="regulations-detail">本人已阅读、了解并接受<a href="">《客户协议书》</a><a href="">《风险披露》</a><a href="">《隐私条款》</a></div>
 			</div>
 			<div class="submit-btn">
-				<button>立即注册</button>
+				<button type="submit">立即注册</button>
 			</div>
 		</form>
 	</div>
@@ -67,6 +67,20 @@
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
 
+		  $(".file-f-btn").on('change',function(event) {
+		  		var files = event.currentTarget.files;
+		  		for( var i = 0; i< files.length;i++ ) {
+		  			var reader = new FileReader(files[i]);
+		  			var img = new Image();
+		  			reader.readAsDataURL(files[i]);
+		  			reader.onload = function(e) {
+		  				var src = reader.result;
+		  				img.src = src;
+		  				$('.identity-img').attr('src',src);
+		  			}
+		  		}  
+		  })
+		 
 
 	})
 

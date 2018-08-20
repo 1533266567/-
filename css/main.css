@@ -99,6 +99,9 @@ textarea{
 .tc{ text-align:center;}
 .none{ display:none;}
 .block{ display:block;}
+.nav-bar .redColor{
+	color: #cd2c24;
+}
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #ddd;  
@@ -1177,6 +1180,7 @@ textarea::-webkit-input-placeholder {
 .expert {
 	/*width: 100%;*/
 	padding-top: 30px;
+	overflow: hidden;
 }
 .expert h4,
 .comment h4,
@@ -1201,17 +1205,19 @@ textarea::-webkit-input-placeholder {
 .expert-list {
 	padding-left: 10px;
 	position: absolute;
+	height: 100%;
 	left: 25px;
 	top: 0px;
 }
 .expert-detail {
 	float: left;
-	margin-right: 40px;
+	margin-right: 35px;
 	width: 230px;
 	height: 290px;
 	background: #fff;
 	border: 1px solid #fff;
 	box-shadow: 0px 0px 12px 3px #e5e5e5; 
+	z-index: 100;
 }
 .expert-pic {
 	width: 120px;
@@ -1241,6 +1247,7 @@ textarea::-webkit-input-placeholder {
 	width: 300px;
 	height: 360px;
 	margin-top: -40px;
+	z-index: 500;
 }
 .isActive .expert-pic {
 	width: 150px;
@@ -1268,7 +1275,7 @@ textarea::-webkit-input-placeholder {
 }
 .expert-next-btn {
 	position: absolute;
-	right: 0px;
+	right: 32px;
 	top: 130px;
 	z-index: 1000;
 }
@@ -1283,30 +1290,6 @@ textarea::-webkit-input-placeholder {
 	border-top: none;
 }
 
-.swiper-slide {
-	width: 300px;
-	height: 290px;
-}
-.swiper-button-next, 
-.swiper-button-prev {
-	width: 16px;
-	height: 32px;
-	background-size: 18px 44px;
-}
-/*.swiper-button-prev {
-	background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23e5e5e5'%2F%3E%3C%2Fsvg%3E")
-}
-.swiper-button-next {
-	background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23e5e5e5'%2F%3E%3C%2Fsvg%3E");
-}*/
-.swiper-container {
-	padding-top: 25px;
-	padding-left: 35px;
-	padding-bottom: 20px;
-	margin-top: 25px;
-	margin-bottom: 49px;
-	height: 400px;
-}
 
 .comment {
 	width: 100%;
@@ -1330,7 +1313,7 @@ textarea::-webkit-input-placeholder {
 .calendar-container {
 	width: 100%;
 	position: relative;
-	height: 95px;
+	height: 100px;
 	overflow: hidden;
 }
 .calendar-container ul {
@@ -1387,14 +1370,14 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 19px;
 }
 .calendar-container .on {
-	border-bottom: 2px solid #cc2e37;
+	border-bottom: 4px solid #cc2e37;
 }
 .calendar-container .on .finance-day,
 .calendar-container .on .finance-week {
 	color: #cc2e37;
 }
 .finance-main {
-	padding-top: 95px;
+	padding-top: 80px;
 	width: 100%;
 	position: relative;
 	margin-bottom: 740px;
@@ -1526,13 +1509,13 @@ textarea::-webkit-input-placeholder {
 .account-wrap {
 	padding-top: 78px;
 }
-.company-pic {
+.account-pic {
 	width: 216px;
 	height: 245px;
 	margin-bottom: 40px;
 	overflow: hidden;
 }
-.company-pic img {
+.account-pic img {
 	width: 100%;
 	display: block;
 }
@@ -1655,7 +1638,9 @@ textarea::-webkit-input-placeholder {
 }
 .account-regulations {
 	font-size: 0;
-	margin-left: 370px;
+	margin: 0 auto;
+	width: 630px;
+	/*margin-left: 370px;*/
 }
 .check-box {
 	width: 20px;
@@ -1691,4 +1676,8 @@ textarea::-webkit-input-placeholder {
 	line-height: 60px;
 	margin: 40px auto 90px;
 	cursor: pointer;
+}
+.identity-img {
+	width: 300px;
+	height: 300px;
 }

@@ -7,7 +7,7 @@
 	<div class="nav-bar fl">
 		<ul class="clearfix">
 			<li class="about-link">
-				<a href="/pages/aboutus.html">关于文传</a>
+				<a href="/pages/aboutus.html" class="nav-name">关于文传</a>
 				<div class="about-list clearfix">
 					<a href="/pages/aboutus.html?type=introduc">公司简介</a>
 					<a href="/pages/aboutus.html?type=advantage">公司优势</a>
@@ -16,13 +16,13 @@
 				</div>
 			</li>
 			<li>
-				<a href="/pages/data.html">数据中心</a>
+				<a href="/pages/data.html" class="nav-name">数据中心</a>
 			</li>
 			<li>
-				<a href="/pages/information.html">行情资讯</a>
+				<a href="/pages/information.html" class="nav-name">行情资讯</a>
 			</li>
 			<li>
-				<a href="/pages/customer.html">客户中心</a>
+				<a href="/pages/customer.html" class="nav-name">客户中心</a>
 			</li>
 		</ul>
 	</div>
@@ -37,7 +37,14 @@
 </div>
 <script type="text/javascript">
 	$(function() {
-
+		var nameList = location.pathname.split('/');
+		var name = nameList[nameList.length-1].split('.')[0];
+		for( var i = 0; i< $('.nav-name').length; i++) {
+			var word = $('.nav-name').eq(i).attr('href').split('/')[2].split('.')[0];
+			if( name == word ) {
+				$('.nav-name').eq(i).addClass('redColor');
+			}
+		}
 
 		$('.nav-bar li').hover(function() {
 			$(this).children('a').addClass('on');
@@ -50,6 +57,5 @@
 		},function() {
 			$('.about-list').hide();
 		});
-
 	})
 </script>
