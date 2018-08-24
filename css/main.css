@@ -156,8 +156,8 @@ textarea::-webkit-input-placeholder {
 	position: relative;
 }
 .logo {
-	width: 230px;
-	height: 72px;
+	width: 218px;
+	height: 74px;
 	margin-top: 20px;
 	background: url(../images/logo.png) no-repeat;
 	background-size: contain;
@@ -172,7 +172,7 @@ textarea::-webkit-input-placeholder {
 }
 .nav-bar {
 	width: 960px;
-	padding-left: 50px;
+	padding-left: 40px;
 	margin: 0 auto;
 }
 .nav-bar ul {
@@ -181,7 +181,7 @@ textarea::-webkit-input-placeholder {
 
 .nav-bar li {
 	float: left;
-	width: 160px;
+	width: 140px;
 	padding-left: 20px;
 	z-index: 10;
 }
@@ -193,7 +193,7 @@ textarea::-webkit-input-placeholder {
 	width: 100%;
 	position: relative;
 	color: #333;
-	font-size: 26px;
+	font-size: 22px;
 	line-height: 110px;
 	text-align: center;
 }
@@ -459,7 +459,9 @@ textarea::-webkit-input-placeholder {
 	position: absolute;
 }
 .footer {
-	background: #002e40;
+	background: -moz-linear-gradient(89deg,#1e559f 0%, #3583c8 100%),-moz-linear-gradient(#002e40, #002e40);
+	background: -webkit-linear-gradient(89deg,#1e559f 0%, #3583c8 100%),-webkit-linear-gradient(#002e40, #002e40);
+	background: linear-gradient(89deg,#1e559f 0%, #3583c8 100%),linear-gradient(#002e40, #002e40);
 	margin:  0 auto;
 	margin-bottom: 3px;
 	width: 100%;
@@ -513,7 +515,7 @@ textarea::-webkit-input-placeholder {
 }
 .tip > p {
 	margin-top: 10px;
-	color: #999;
+	color: #fff;
 	font-size: 16px;
 	line-height: 2;
 }
@@ -528,12 +530,12 @@ textarea::-webkit-input-placeholder {
 }
 .notes li a {
 	display: block;
-	color: #999;
+	color: #fff;
 	font-size: 16px;
 	padding-bottom: 20px;
 }
 .contact li {
-	color: #999;
+	color: #fff;
 	font-size: 16px;
 	padding-bottom: 20px;
 	width: 220px;
@@ -694,7 +696,9 @@ textarea::-webkit-input-placeholder {
 .download-list li:first-child {
 	height: 60px;
 	line-height: 60px;
-	background: #002e40;
+	background: -webkit-linear-gradient(-90deg, #cd2c24 0%, #f2836b 100%);
+	background: -moz-linear-gradient(-90deg, #cd2c24 0%, #f2836b 100%);
+	background: linear-gradient(-90deg, #cd2c24 0%, #f2836b 100%); 
 }
 .download-list li:first-child > a {
 	color: #fff;
@@ -902,7 +906,7 @@ textarea::-webkit-input-placeholder {
 	width: 10px;
 	height: 10px;
 	transform: rotate(135deg);
-	border: 2px solid #333;
+	border: 2px solid #1e559f;
 	border-left: none;
 	border-top: none;
 }
@@ -919,7 +923,7 @@ textarea::-webkit-input-placeholder {
 	width: 10px;
 	height: 10px;
 	transform: rotate(-45deg);
-	border: 2px solid #333;
+	border: 2px solid #1e559f;
 	border-left: none;
 	border-top: none;
 }
@@ -930,6 +934,7 @@ textarea::-webkit-input-placeholder {
 .page-wrap .page {
 	font-size: 24px;
 	margin: 0 10px;
+	color: #1e559f;
 }
 .page-wrap .on {
 	color: #cd2c24;
