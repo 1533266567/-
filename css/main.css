@@ -1686,3 +1686,33 @@ textarea::-webkit-input-placeholder {
 	width: 300px;
 	height: 300px;
 }
+.extract {
+	width: 100%;
+	margin-bottom: 176px;
+}
+.extract-btn {
+	width: 100%;
+	margin-top: 59px;
+	margin-bottom: 40px;
+}
+.extract-btn a {
+	display: block;
+	margin: 0 auto;
+	width: 340px;
+	height: 80px;
+	font-size: 30px;
+	color: #cd2c24;
+	line-height: 80px;
+	padding-left: 68px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: solid 2px #cd2c24
+}
+.extract p {
+	font-size: 16px;
+	color: #333333;
+	margin-bottom: 20px;
+	padding-left: 40px;
+	width: 100%;
+}
