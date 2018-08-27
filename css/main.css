@@ -1820,3 +1820,36 @@ textarea::-webkit-input-placeholder {
 .step li:after {
 	position: absolute;
 }
+.guide {
+	width: 100%;
+	padding-bottom: 122px;
+}
+.guide-step {
+	padding-top: 30px;
+}
+.guide-step p {
+	font-size: 18px;
+	color: #333;
+	padding-bottom: 30px;
+}
+.guide-step .red {
+	color: #cd2c24;
+}
+.guide-pic {
+	width: 850px;
+	height: 430px;
+	margin: 0 auto;
+	background: #eee;
+}
+.guide-detail p{
+	padding-bottom: 20px;
+}
+.t-ident {
+	text-indent: 2em;
+}
+.guide-detail .remarks {
+	font-size: 16px;
+	color: #cd2c24;
+	text-indent: 2em;
+	line-height: 2;
+}
