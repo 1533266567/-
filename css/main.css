@@ -99,10 +99,12 @@ textarea{
 .tc{ text-align:center;}
 .none{ display:none;}
 .block{ display:block;}
+.redColor {
+	color: #cd2c24;
+}
 .nav-bar .redColor{
 	color: #cd2c24;
 }
-
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #ddd;  
 }
@@ -730,15 +732,15 @@ textarea::-webkit-input-placeholder {
 	position: relative;
 }
 .content h2 {
-	font-size: 40px;
+	font-size: 36px;
 	color: #333;
 	padding-top: 50px;
 	padding-bottom: 30px;
 	border-bottom: 2px solid #e5e5e5;
 }
 .company-pic {
-	width: 306px;
-	height: 230px;
+	width: 240px;
+	height: 180px;
 	margin: 0 auto;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -752,7 +754,7 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 277px;
 }
 .content-word p {
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 2.4;
 	text-indent: 2em;
 }
@@ -1475,6 +1477,9 @@ textarea::-webkit-input-placeholder {
 .clause-content h4 {
 	margin-bottom: 40px;
 }
+.clause-content .pay-icon {
+	background: url(../images/lignhtArrow.png) no-repeat;
+}
 .clause-btn li {
 	float: left;
 	padding: 20px 25px;
@@ -1707,7 +1712,18 @@ textarea::-webkit-input-placeholder {
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-	border: solid 2px #cd2c24
+	border: solid 2px #cd2c24;
+	position: relative;
+}
+.extract-btn a:before{
+	position: absolute;
+	background: url(../images/file.png) no-repeat;
+	background-size: contain;
+	width: 34px;
+	height: 44px;
+	content: '';
+	left: 20px;
+	top: 18px;
 }
 .extract p {
 	font-size: 16px;
@@ -1715,4 +1731,94 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 20px;
 	padding-left: 40px;
 	width: 100%;
+}
+.pay-btn li {
+	padding: 20px 30px;
+}
+.dispute {
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 168px;
+}
+.dispute-item {
+	margin-bottom: 40px;
+}
+.dispute-item h4 {
+	width: 210px;
+	height: 61px;
+	background: url(../images/lignhtArrow.png) no-repeat;
+	background-size: contain;
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 30px;
+	line-height: 61px;
+	padding-left: 39px;
+}
+.dispute-item .small {
+		background: url(../images/smallArrow.png) no-repeat;
+}
+.dispute-item p {
+	font-size: 16px;
+	text-indent: 2em;
+	line-height: 40px;
+	color: #333;
+}
+.dispute-item .red {
+	color: #cd2c24;
+}
+.step {
+	width: 100%;
+	padding: 30px 0;
+}
+.step-item {
+	float: left;
+	width: 230px;
+	height: 120px;
+	background: #fff;
+	position: relative;
+}
+.step-item:last-child {
+	width: 190px;
+}
+.step-item:after {
+	position: absolute;
+	right: 0px;
+	top: 37px;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 16px solid #cd2c24;
+	border-left-width: 14px;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.step-item:last-child:after {
+	display: none;
+}
+.step-item span {
+	display: block;
+	background: #eee;
+	width: 190px;
+	height: 120px;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #333;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+.step-item .lh {
+	line-height: 120px;
+	text-align: center;
+}
+.step-item .sec {
+	padding: 0 21px;
+}
+.step-item  .four {
+	padding: 16px 32px 0;
+}
+.step li:after {
+	position: absolute;
 }
