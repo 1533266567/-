@@ -1224,7 +1224,9 @@ textarea::-webkit-input-placeholder {
 	background: #fff;
 	border: 1px solid #fff;
 	box-shadow: 0px 0px 12px 3px #e5e5e5; 
-	z-index: 100;
+}
+.expert-detail:last-child {
+	margin-right: 0px;
 }
 .expert-pic {
 	width: 120px;
@@ -1254,15 +1256,11 @@ textarea::-webkit-input-placeholder {
 	width: 300px;
 	height: 360px;
 	margin-top: -40px;
-	z-index: 500;
 }
 .isActive .expert-pic {
 	width: 150px;
 	height: 150px;
 	margin: 30px auto;
-}
-.expert-detail:last-child {
-	margin-right: 0px;
 }
 .expert-pre-btn {
 	position: absolute;

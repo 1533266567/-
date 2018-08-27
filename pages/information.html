@@ -24,7 +24,7 @@
 				<li><a href="" class="down-arrow">表格下载</a></li>
 			</ul>
 		</div>
-		<div class="content none">
+		<div class="content">
 			<h2 class="p-t-0">热门资讯</h2>
 			<ul>
 				<li class="skill-content clearfix info-item">
@@ -111,7 +111,7 @@
 				<a href="" class="back-arrow"></a>
 			</div>
 		</div>
-		<div class="content">
+		<div class="content none">
 			<h2 class="p-t-0">专家评论</h2>
 			<div class="expert">
 				<h4>专家团队</h4>
@@ -411,9 +411,8 @@
 		 		}else {
 		 			left = $('.expert-detail').eq(j).position().left;
 		 		}
-		 		
-		 		console.log(getLeft(j))
-		 		obj.left = left;
+		 		obj.left = getLeft(j);
+		 		obj.zIndex = len-(j+1);
 		 		if( j==1 ) {
 		 			obj.active = true;
 		 		} else {
@@ -425,7 +424,8 @@
 		 	for( var k=0;k<len;k++ ) {	 		
 		 		$('.expert-detail').eq(k).css({
 		 			'left':positionArr[k].left,
-		 			'position':'absolute'
+		 			'position':'absolute',
+		 			'zIndex':positionArr[k].zIndex,
 		 		})
 		 	}	
 		 }
@@ -434,9 +434,7 @@
 		 		return 10;
 		 	}
 		 	var lastVal = parseInt( $('.expert-detail').eq(index-1).width() )+ parseInt($('.expert-detail').eq(index-1).css('marginRight'));
-		 	console.log(parseInt( $('.expert-detail').eq(index-1).width() ))
-		 	console.log( parseInt($('.expert-detail').eq(index-1).css('marginRight')) )
-		 	return 10+lastVal+getLeft(index-1)
+		 	return 2+lastVal+getLeft(index-1);//border 2
 		 }
 		 initExpert(); 
 
@@ -450,6 +448,7 @@
 				}else {
 					$('.expert-detail').eq(i).removeClass('isActive');
 				}
+				$('.expert-detail').eq(i).css('zIndex',positionArr[i].zIndex)
 				$('.expert-detail').eq(i).stop(true, true).animate({ 'left':positionArr[i].left },300)
 			}
 			return false;
@@ -464,6 +463,7 @@
 				}else {
 					$('.expert-detail').eq(i).removeClass('isActive');
 				}
+				$('.expert-detail').eq(i).css('zIndex',positionArr[i].zIndex)
 				$('.expert-detail').eq(i).stop(true, true).animate({ 'left':positionArr[i].left },300)
 			}
 			return false;
