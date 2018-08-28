@@ -115,12 +115,14 @@ textarea{
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #ddd;
+    color: #e5e5e5;
+    font-size: 21px;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #ddd;
+    color: #e5e5e5;
+    font-size: 21px;
 }
 .w1200 {
 	width: 1200px;
@@ -787,7 +789,7 @@ textarea::-webkit-input-placeholder {
 	display: block;
 	height: 80px;
 	line-height: 80px;
-	font-size: 24px;
+	font-size: 20px;
 	color: #333;
 }
 .dynamic-time {
@@ -826,8 +828,9 @@ textarea::-webkit-input-placeholder {
 }
 .connect-way h5 {
 	color: #333;
-	font-size: 22px;
+	font-size: 16px;
 	padding: 50px 30px;
+	padding-left: 39px;
 }
 .connect {
 	width: 100%;
@@ -963,8 +966,8 @@ textarea::-webkit-input-placeholder {
 }
 .skill-pic {
 	float: left;
-	width: 180px;
-	height: 120px;
+	width: 160px;
+	height: 110px;
 	overflow: hidden;
 }
 .skill-pic img {
@@ -973,18 +976,27 @@ textarea::-webkit-input-placeholder {
 }
 .skill-word {
 	float: right;
-	width: 680px;
+	width: 690px;
 }
 .skill-word h5 {
 	width: 100%;
-	font-size: 30px;
+	font-size: 22px;
 	color: #333;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 .skill-word p {
 	width: 100%;
-	font-size: 22px;
+	font-size: 18px;
 	color: #999;
+	text-indent: 2em;
+	
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+
 }
 .blank-block {
 	width: 890px;
@@ -1010,11 +1022,11 @@ textarea::-webkit-input-placeholder {
 .compare h4 {
 	width: 210px;
 	height: 61px;
-	background: url(../images/arrow.png) no-repeat;
+	background: url(../images/lignhtArrow.png) no-repeat;
 	background-size: contain;
 	color: #fff;
-	font-size: 30px;
-	padding-left: 27px;
+	font-size: 24px;
+	padding-left: 39px;
 	line-height: 61px;
 	margin-bottom: 35px;
 }
@@ -1029,7 +1041,7 @@ textarea::-webkit-input-placeholder {
 	text-align: center;
 	line-height: 45px;
 	color: #999;
-	font-size: 24px;
+	font-size: 22px;
 	cursor: pointer;
 }
 .real-nav .on {
@@ -1055,17 +1067,18 @@ textarea::-webkit-input-placeholder {
 .offer-item em {
 	float: left;
 	color: #333;
-	font-size: 26px;
+	font-size: 22px;
 	margin-right: 30px;
 	width: 79px;
 	text-align: center;
+	margin-top: 5px;
 }
 .offer-detail {
 	float: left;
 	padding-bottom: 22px;
 }
 .offer-detail  .o-d-text {
-	font-size: 26px;
+	font-size: 22px;
 	color: #999;
 	padding-right: 10px;
 }
@@ -1090,8 +1103,8 @@ textarea::-webkit-input-placeholder {
 }
 .compare h4 {
 	width: 265px;
-	padding-left: 30px;
-	background: url(../images/bigArrow.png) no-repeat;
+	padding-left: 40px;
+	background: url(../images/big-arrow.png) no-repeat;
 }
 .compare {
 	position: relative;
@@ -1101,7 +1114,7 @@ textarea::-webkit-input-placeholder {
 .compare-name {
 	float: left;
 	width: 79px;
-	font-size: 26px;
+	font-size: 22px;
 	text-align: center;
 	margin-right: 30px;
 }
@@ -1130,11 +1143,11 @@ textarea::-webkit-input-placeholder {
 	top: 133px;
 }
 .tag-icon em {
-	font-size: 22px;
+	font-size: 18px;
 	color: #666;
 	display: block;
 	width: 90px;
-	padding-left: 40px;
+	padding-left: 36px;
 	position: relative;
 }
 .tag-icon .red {
@@ -1146,8 +1159,8 @@ textarea::-webkit-input-placeholder {
 .tag-icon em:before {
 	position: absolute;
 	content: '';
-	width: 30px;
-	height: 30px;
+	width: 24px;
+	height: 24px;
 	background: #cd2c24;
 	left: 2px;
 	top: 2px;
@@ -1164,14 +1177,14 @@ textarea::-webkit-input-placeholder {
 	text-indent: 2em;
 }
 .skill-word .info-title {
-	font-size: 28px;
+	font-size: 22px;
 }
 .info-item {
 	padding: 40px 0 50px 20px;
 	position: relative;
 }
 .read-all {
-	font-size: 22px;
+	font-size: 18px;
 	color: #cd2c24;
 	position: absolute;
 	right: 10px;
@@ -1179,10 +1192,10 @@ textarea::-webkit-input-placeholder {
 }
 .article-time {
 	position: absolute;
-	font-size: 20px;
+	font-size: 16px;
 	color: #999;
-	right: 8px;
-	bottom: 5px;
+	left: 206px;
+	bottom: 40px;
 }
 .expert {
 	/*width: 100%;*/
@@ -1194,11 +1207,11 @@ textarea::-webkit-input-placeholder {
 .clause-content h4 {
 	width: 210px;
 	height: 61px;
-	background: url(../images/arrow.png) no-repeat;
+	background: url(../images/lignhtArrow.png) no-repeat;
 	background-size: contain;
 	color: #fff;
-	font-size: 30px;
-	padding-left: 27px;
+	font-size: 24px;
+	padding-left: 39px;
 	line-height: 61px;
 	margin-bottom: 10px;
 }
@@ -1307,7 +1320,7 @@ textarea::-webkit-input-placeholder {
 }
 .comment li>a {
 	float: left;
-	font-size: 24px;
+	font-size: 22px;
 	color: #333;
 }
 .comment .time {
@@ -1368,7 +1381,7 @@ textarea::-webkit-input-placeholder {
 .finance-week {
 	display: block;
 	color: #999;
-	font-size: 22px;
+	font-size: 18px;
 	text-align: center; 
 }
 .finance-week  {
@@ -1382,7 +1395,7 @@ textarea::-webkit-input-placeholder {
 	color: #cc2e37;
 }
 .finance-main {
-	padding-top: 80px;
+	padding-top: 70px;
 	width: 100%;
 	position: relative;
 	margin-bottom: 740px;
@@ -1405,16 +1418,16 @@ textarea::-webkit-input-placeholder {
 }
 .finance-time {
 	float: left;
-	padding-left: 19px;
-	padding-right: 29px;
+	padding-left: 20px;
+	padding-right: 40px;
 	color: #3d7f99;
-	font-size: 24px;
+	font-size: 22px;
 }
 .finance-text {
 	float: left;
 	color: #3d7f99;
-	font-size: 24px;
-	padding-right: 40px;
+	font-size: 22px;
+	padding-right: 50px;
 }
 .finance-star {
 	float: left;
@@ -1426,6 +1439,7 @@ textarea::-webkit-input-placeholder {
 	height: 18px;
 	background: url(../images/empty-star.png) no-repeat;
 	background-size: contain;
+	margin-right: 5px;
 }
 .finance-star .on {
 	background: url(../images/star.png) no-repeat;
@@ -1433,8 +1447,8 @@ textarea::-webkit-input-placeholder {
 .finance-val,
 .publish-val{
 	float: left;
-	font-size: 24px;
-	height: #333;
+	font-size: 22px;
+	color: #333;
 }
 .finance-val {
 	padding-left: 40px;
@@ -1442,13 +1456,13 @@ textarea::-webkit-input-placeholder {
 }
 .parame {
 	position: absolute;
-	right: 20px;
+	right: 22px;
 	top: 20px;
 }
 .parame span {
-	font-size: 26px;
+	font-size: 22px;
 	color: #666;
-	padding-right: 40px;
+	padding-right: 60px;
 }
 .parame span:last-child {
 	padding-right: 0px;
@@ -1500,17 +1514,22 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 122px;
 }
 .clause-content h6 {
-	font-size: 22px;
+	font-size: 16px;
+	text-indent: 2em;
 	color: #333;
 	font-weight: 700;
 	margin-top: 40px;
 	margin-bottom: 10px;
 }
 .clause-content p {
-	font-size: 22px;
+	font-size: 16px;
 	color: #333;
 	text-indent: 2em;
 	line-height: 2;
+}
+.clause-content h5 {
+	font-size: 20px;
+	padding: 10px 0;
 }
 
 /*开立账户*/
@@ -1547,6 +1566,7 @@ textarea::-webkit-input-placeholder {
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	font-size: 22px;
+	padding-left: 22px;
 }
 .account-phone {
 	width: 743px;
@@ -1578,9 +1598,13 @@ textarea::-webkit-input-placeholder {
 	font-size: 22px;
 }
 .account-phone > input {
+	padding-left: 22px;
+}
+.account-phone > input {
 	width: 500px;
 	height: 50px;
 	margin-left: 30px;
+	padding-left: 22px;
 }
 .account-code {
 	width: 786px;
@@ -1852,4 +1876,59 @@ textarea::-webkit-input-placeholder {
 	color: #cd2c24;
 	text-indent: 2em;
 	line-height: 2;
+}
+.teach-btn {
+	width: 100%;
+	padding: 30px 0 50px;
+}
+.teach-btn li {
+	float: left;
+	margin-right: 40px;
+	width: 140px;
+	height: 60px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;border-radius: 8px;
+	border-radius: 8px;
+	border: solid 2px #999;
+	text-align: center;
+	line-height: 60px;
+	color: #999;
+	cursor: pointer;
+	font-size: 20px;
+}
+.teach-btn .on {
+	color: #cd2c24;
+	border: 2px solid #cd2c24;
+}
+.teaching-content {
+	width: 100%;
+}
+.teaching-item {
+	padding-bottom: 30px;
+}
+.teaching-item h4 {
+	width: 210px;
+	height: 61px;
+	background: url(../images/lignhtArrow.png) no-repeat;
+	background-size: contain;
+	padding-left: 40px;
+	color: #fff;
+	line-height: 61px;
+	font-size: 24px;
+	margin-bottom: 30px;
+}
+.teaching-item  p {
+	color: #333;
+	font-size: 16px;
+	line-height: 2.2;
+	text-indent: 2em;
+}
+.teaching-item  h6 {
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.teaching-item  h5 {
+	font-size: 20px;
+	padding: 10px 0;
 }
