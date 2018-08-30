@@ -122,6 +122,33 @@
 		 	$('.content').eq(index).removeClass('none').siblings('.content').addClass('none');
 		 })
 
+		  $('.page').on('click',function() {
+		 	$(this).addClass('on').siblings('.page').removeClass('on');
+		 })
+		 var onIndex = 0;
+		 var len = $('.page').length;
+		 $('.back-arrow').on('click',function() {
+		 	
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex < 2 ) {
+		 		$('.page').eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
+		 $('.font-arrow').on('click',function() {
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex > 0 ) {
+		 		$('.page').eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
+
 	})
 
 </script>

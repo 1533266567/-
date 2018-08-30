@@ -20,8 +20,8 @@
 			</ul>
 			<ul class="download-list">
 				<li><a href="javascript:;">下载中心</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow">平台下载</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow">表格下载</a></li>
+				<li><a href="/pages/downloadPlatform.html" class="down-arrow">平台下载</a></li>
+				<li><a href="/pages/downloadTable.html" class="down-arrow">表格下载</a></li>
 			</ul>
 		</div>
 		<div class="content">
@@ -67,44 +67,44 @@
 			<h2>公告动态</h2>
 			<ul class="dynamic-list">
 				<li class="news-top clearfix">
-					<a href="" class="dynamic-link">非农就业数据公布前市况温馨提示</a>
+					<a href="javascript:;" class="dynamic-link">非农就业数据公布前市况温馨提示</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="news-top clearfix">
-					<a href="" class="dynamic-link">非农就业数据公布前市况温馨提示</a>
+					<a href="javascript:;" class="dynamic-link">非农就业数据公布前市况温馨提示</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">香港端午节假期交易及出入金安排</a>
+					<a href="javascript:;" class="dynamic-link">香港端午节假期交易及出入金安排</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">香港佛诞假期及美国阵亡将士纪念日假期交易及出入金安排</a>
+					<a href="javascript:;" class="dynamic-link">香港佛诞假期及美国阵亡将士纪念日假期交易及出入金安排</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">台风天气的交易安排</a>
+					<a href="javascript:;" class="dynamic-link">台风天气的交易安排</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">系统升级公告</a>
+					<a href="javascript:;" class="dynamic-link">系统升级公告</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">美国独立日假期休市公告</a>
+					<a href="javascript:;" class="dynamic-link">美国独立日假期休市公告</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 				<li class="clearfix">
-					<a href="" class="dynamic-link">美国独立日假期休市公告</a>
+					<a href="javascript:;" class="dynamic-link">美国独立日假期休市公告</a>
 					<span class="dynamic-time">2018-07-31</span>
 				</li>
 			</ul>
 			<div class="page-wrap">
-				<a href="" class="font-arrow"></a>
-				<a href="" class="page on">1</a>
-				<a href="" class="page">2</a>
-				<a href="" class="page">3</a>
-				<a href="" class="back-arrow"></a>
+				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="page on">1</a>
+				<a href="javascript:;" class="page">2</a>
+				<a href="javascript:;" class="page">3</a>
+				<a href="javascript:;" class="back-arrow"></a>
 			</div>
 		</div>
 
@@ -206,33 +206,38 @@
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
 
-		 // var noIndex = 0;
-		 // var type = window.location.search.split('=')[1];
-		 // console.log(window.location)
-		 // switch(type) {
-		 // 	case 'introduc':
-		 // 		noIndex = 0;
-		 // 		break;
-		 // 	case 'advantage':
-		 // 		noIndex = 1;
-		 // 		break
-		 // 	case 'dynamic':
-		 // 		noIndex = 2;
-		 // 		break
-		 // 	case 'contact':
-		 // 		noIndex = 3;
-		 // 		break
-		 // }
-
-		 // $('.colum-lists li').eq(noIndex).addClass('active').siblings('li').removeClass('active');
-		 // $('content').eq(noIndex).removeClass('none').siblings('.content').addClass('none');
-
-
 		 $('.colum-lists li').on('click',function() {
 		 	var index = $(this).index();
 		 	console.log(index);
 		 	$(this).addClass('active').siblings('li').removeClass('active');
 		 	$('.content').eq(index).removeClass('none').siblings('.content').addClass('none');
+		 })
+
+		 $('.page').on('click',function() {
+		 	$(this).addClass('on').siblings('.page').removeClass('on');
+		 })
+		 var onIndex = 0;
+		 var len = $('.page').length;
+		 $('.back-arrow').on('click',function() {
+		 	
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex < 2 ) {
+		 		$('.page').eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
+		 $('.font-arrow').on('click',function() {
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex > 0 ) {
+		 		$('.page').eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
+		 	}
 		 })
 
 	})

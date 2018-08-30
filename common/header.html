@@ -2,7 +2,6 @@
 <div class="header-content clearfix">
 	<div class="logo fl">
 		<a href="../index.html"></a>
-		<!-- <img src="images/logo.png" alt="" /> -->
 	</div>
 	<div class="nav-bar fl">
 		<ul class="clearfix">
@@ -32,7 +31,6 @@
 						<a href="/pages/product.html?type=capital">提取资金</a>
 						<a href="/pages/product.html?type=clause">条款细则</a>
 						<a href="/pages/product.html?type=account">开户指南</a>
-						<a href="/pages/product.html?type=download">平台下载</a>
 						<a href="/pages/product.html?type=privacy">隐私条款</a>
 						<a href="/pages/product.html?type=deposit">存入资金</a>
 						<a href="/pages/product.html?type=dispute">争端处理</a>
@@ -84,13 +82,19 @@
 </div>
 <script type="text/javascript">
 	$(function() {
-		var nameList = location.pathname.split('/');
+		var nameList = window.location.pathname.split('/');
 		var name = nameList[nameList.length-1].split('.')[0];
 		for( var i = 0; i< $('.nav-name').length; i++) {
 			var word = $('.nav-name').eq(i).attr('href').split('/')[2].split('.')[0];
 			if( name == word ) {
 				$('.nav-name').eq(i).addClass('redColor');
 			}
+		}
+		if(name == 'skillDetail') {
+			$('.nav-name').eq(2).addClass('redColor');
+		}
+		if( name == 'newsDetail' ) {
+			$('.nav-name').eq(3).addClass('redColor');
 		}
 
 		$('.nav-bar li').hover(function() {

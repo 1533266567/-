@@ -1,9 +1,9 @@
 (function() {
 	var route = [];
-	var aboutRoute = ['introduc','advantage','group','dynamic','contact'];
-	var serverRoute = ['details','capital','clause','account','download','privacy','deposit','dispute','cookies'];
+	var aboutRoute = ['introduc','group','advantage','dynamic','contact'];
+	var serverRoute = ['details','account','deposit','capital','dispute','clause','privacy','cookies'];
 	var collegeRoute = ['teaching','skill','data','discount'];
-	var infoRoute = ['hot','special','expert','calendar'];
+	var infoRoute = ['hot','expert','special','calendar'];
 
 	var path = window.location.pathname.split('/');
 	var pathName = path[path.length-1].split('.')[0];

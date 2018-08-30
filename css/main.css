@@ -2411,3 +2411,34 @@ table .bge {
 .table-bottom {
 	margin-bottom: 123px;
 }
+.side-box {
+	position: fixed;
+	right: 0;
+	top: 130px;
+}
+.side-box li {
+	width: 90px;
+	height: 90px;
+	margin-bottom: 10px;
+}
+.side-box li >a{
+	display: block;
+	width: 100%;
+	height: 100%
+}
+.server-link {
+	background: url(../images/kefu.png) no-repeat;
+	background-size: contain;
+}
+.account-link {
+	background: url(../images/account.png) no-repeat;
+	background-size: contain;
+}
+.customer-link {
+	background: url(../images/server.png) no-repeat;
+	background-size: contain;
+}
+.back-link {
+	background: url(../images/backTop.png) no-repeat;
+	background-size: contain;
+}

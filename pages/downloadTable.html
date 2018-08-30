@@ -19,66 +19,66 @@
 				<li class="clearfix">
 					<p>非农就业数据公布前市况温馨提示</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>非农就业数据公布前市况温馨提示</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>香港端午节假期交易及出入金安排</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>香港佛诞假期及美国阵亡将士纪念日假期交易及出入金安排</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>台风天气的交易安排</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>系统升级公告</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>美国独立日假期休市公告</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 				<li class="clearfix">
 					<p>美国独立日假期休市公告</p>
 					<div class="list-right">
-						<a href="" class="table-btn"></a>
+						<a href="javascript:;" class="table-btn"></a>
 						<span class="table-time">2018-07-31</span>
 					</div>
 				</li>
 			</ul>
 			<div class="page-wrap table-bottom">
-				<a href="" class="font-arrow"></a>
-				<a href="" class="page on">1</a>
-				<a href="" class="page">2</a>
-				<a href="" class="page">3</a>
-				<a href="" class="back-arrow"></a>
+				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="page on">1</a>
+				<a href="javascript:;" class="page">2</a>
+				<a href="javascript:;" class="page">3</a>
+				<a href="javascript:;" class="back-arrow"></a>
 			</div>
 		</div>
 	</div>
@@ -89,7 +89,33 @@
 	$(function() {
 		$('#header').load('../common/header.html');
 		$('#footer').load('../common/footer.html');
-	
+
+		$('.page').on('click',function() {
+		 	$(this).addClass('on').siblings('.page').removeClass('on');
+		 })
+		 var onIndex = 0;
+		 var len = $('.page').length;
+		 $('.back-arrow').on('click',function() {
+		 	
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex < 2 ) {
+		 		$('.page').eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
+		 $('.font-arrow').on('click',function() {
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex > 0 ) {
+		 		$('.page').eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
 	})
 	 
 </script>

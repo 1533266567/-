@@ -19,8 +19,8 @@
 			</ul>
 			<ul class="download-list">
 				<li><a href="javascript:;">下载中心</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow" class="down-arrow">平台下载</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow" class="down-arrow">表格下载</a></li>
+				<li><a href="/pages/downloadPlatform.html" class="down-arrow">平台下载</a></li>
+				<li><a href="/pages/downloadTable.html" class="down-arrow">表格下载</a></li>
 			</ul>
 		</div>
 		<div class="content">
@@ -103,11 +103,11 @@
 				</li>
 			</ul>
 			<div class="page-wrap m-b-17">
-				<a href="" class="font-arrow"></a>
-				<a href="" class="page on">1</a>
-				<a href="" class="page">2</a>
-				<a href="" class="page">3</a>
-				<a href="" class="back-arrow"></a>
+				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="page on">1</a>
+				<a href="javascript:;" class="page">2</a>
+				<a href="javascript:;" class="page">3</a>
+				<a href="javascript:;" class="back-arrow"></a>
 			</div>
 		</div>
 		<div class="content none">
@@ -145,32 +145,32 @@
 			<ul class="comment">
 				<h4>专业点评</h4>
 				<li>
-					<a href="">非农就业不及预期，黄金全周下探回收。</a>
+					<a href="javascript:;">非农就业不及预期，黄金全周下探回收。</a>
 					<span class="time">2018-07-31</span>
 				</li>
 				<li>
-					<a href="">美元指数再创新高，金银保持地位震荡。</a>
+					<a href="javascript:;">美元指数再创新高，金银保持地位震荡。</a>
 					<span class="time">2018-07-31</span>
 				</li>
 				<li>
-					<a href="">非农就业不及预期，黄金全周下探回收。</a>
+					<a href="javascript:;">非农就业不及预期，黄金全周下探回收。</a>
 					<span class="time">2018-07-31</span>
 				</li>
 				<li>
-					<a href="">美元指数再创新高，金银保持地位震荡。</a>
+					<a href="javascript:;">美元指数再创新高，金银保持地位震荡。</a>
 					<span class="time">2018-07-31</span>
 				</li>
 				<li>
-					<a href="">非农就业不及预期，黄金全周下探回收。</a>
+					<a href="javascript:;">非农就业不及预期，黄金全周下探回收。</a>
 					<span class="time">2018-07-31</span>
 				</li>
 			</ul>
 			<div class="page-wrap">
-				<a href="" class="font-arrow"></a>
-				<a href="" class="page on">1</a>
-				<a href="" class="page">2</a>
-				<a href="" class="page">3</a>
-				<a href="" class="back-arrow"></a>
+				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="page on">1</a>
+				<a href="javascript:;" class="page">2</a>
+				<a href="javascript:;" class="page">3</a>
+				<a href="javascript:;" class="back-arrow"></a>
 			</div>
 		</div>
 
@@ -254,11 +254,11 @@
 				</li>
 			</ul>
 			<div class="page-wrap m-b-17">
-				<a href="" class="font-arrow"></a>
-				<a href="" class="page on">1</a>
-				<a href="" class="page">2</a>
-				<a href="" class="page">3</a>
-				<a href="" class="back-arrow"></a>
+				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="page on">1</a>
+				<a href="javascript:;" class="page">2</a>
+				<a href="javascript:;" class="page">3</a>
+				<a href="javascript:;" class="back-arrow"></a>
 			</div>
 		</div>
 
@@ -488,6 +488,33 @@
 		 	$('.calendar-container ul').width(width);
 		 }
 		initCalendar();
+
+		 $('.page').on('click',function() {
+		 	$(this).addClass('on').siblings('.page').removeClass('on');
+		 })
+		 var onIndex = 0;
+		 var len = $('.page').length;
+		 $('.back-arrow').on('click',function() {
+		 	
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex < 2 ) {
+		 		$('.page').eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
+		 $('.font-arrow').on('click',function() {
+		 	for(var i = 0; i < len; i++ ) {
+		 		if( $('.page').eq(i).hasClass('on') ) {
+		 			onIndex = i;
+		 		}
+		 	}
+		 	if( onIndex > 0 ) {
+		 		$('.page').eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
+		 	}
+		 })
 
 	})
 

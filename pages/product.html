@@ -16,7 +16,6 @@
 				<li><a href="javascript:;">开户指南</a></li>
 				<li><a href="javascript:;">存入资金</a></li>
 				<li><a href="javascript:;">提取资金</a></li>
-				<li><a href="javascript:;">平台下载</a></li>
 				<li><a href="javascript:;">争端处理</a></li>
 				<li><a href="javascript:;">条款细则</a></li>
 				<li><a href="javascript:;">隐私条款</a></li>
@@ -24,8 +23,8 @@
 			</ul>
 			<ul class="download-list">
 				<li><a href="javascript:;">下载中心</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow" class="down-arrow">平台下载</a></li>
-				<li><a href="http://wcjy.hk/tc/platform.html" class="down-arrow" class="down-arrow">表格下载</a></li>
+				<li><a href="/pages/downloadPlatform.html" class="down-arrow">平台下载</a></li>
+				<li><a href="/pages/downloadTable.html" class="down-arrow">表格下载</a></li>
 			</ul>
 		</div>
 		
@@ -42,7 +41,7 @@
 					<li>异常交易</li>
 					<li>交易规例表</li>
 				</ul>
-				<div class="trade-content none">
+				<div class="trade-content">
 					<div class="trade-item">
 						<h4>交易产品</h4>
 						<p>文传金银MT4平台提供贵金属现货保证金交易。简单的交易产品资料，请查看贵金属交易列表。</p>
@@ -124,7 +123,7 @@
 						<p style="color: #cd2c24">＊异常交易的解释权归文传金银有限公司所有，如有任何争议，一切以文传金银之决定为最终裁决。</p>
 					</div>
 				</div>
-				<div class="trade-content">
+				<div class="trade-content none">
 					<div class="trade-item">
 						<h4 class="max">交易规则及规例一览表</h4>
 					</div>
@@ -267,7 +266,7 @@
 			<h2>提取资金</h2>
 			<div class="extract">
 				<div class="extract-btn">
-					<a href="">点击下载提款表格</a>
+					<a href="javascript:;">点击下载提款表格</a>
 				</div>
 				<p>如阁下欲提取交易账户资金，请提交提款表格。请在提款表格签署及填写：</p>
 				<p>账户持有人名称</p>
@@ -278,16 +277,6 @@
 				<p>邮寄：香港金钟夏悫道18号海富中心1座2607室</p>
 				<p>电邮：info@wcjy.hk</p>
 				<p>传真：+852 3896 3610</p>		
-			</div>
-		</div>
-
-		<div class="content none">
-			<div class="content-banner">
-				<img src="../images/aboutus/topBanner.png" alt="" />
-			</div>
-			<h2>平台下载</h2>
-			<div>
-				
 			</div>
 		</div>
 
@@ -444,11 +433,16 @@
 	 		$('.pay-content').eq(index).removeClass('none').siblings('.pay-content').addClass('none');
 	 	})
 
-
 		$('.colum-lists li').on('click',function() {
 		 	var index = $(this).index();
 		 	$(this).addClass('active').siblings('li').removeClass('active');
 		 	$('.content').eq(index).removeClass('none').siblings('.content').addClass('none');
+		})
+
+		$('.trade-btn li').on('click',function() {
+			var index = $(this).index();
+		 	$(this).addClass('on').siblings('li').removeClass('on');
+		 	$('.trade-content').eq(index).removeClass('none').siblings('.trade-content').addClass('none');
 		})
 
 
