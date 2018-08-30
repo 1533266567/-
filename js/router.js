@@ -1,6 +1,6 @@
 (function() {
 	var route = [];
-	var aboutRoute = ['introduc','group','advantage','dynamic','contact'];
+	var aboutRoute = ['introduc','group','dynamic','advantage','contact'];
 	var serverRoute = ['details','account','deposit','capital','dispute','clause','privacy','cookies'];
 	var collegeRoute = ['teaching','skill','data','discount'];
 	var infoRoute = ['hot','expert','special','calendar'];
