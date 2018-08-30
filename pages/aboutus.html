@@ -200,30 +200,32 @@
 	<div class="footer" id="footer"></div>
 
 <script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/router.js"></script>
 <script type="text/javascript">
 	$(function() {
 		 $('#header').load('../common/header.html');
 		 $('#footer').load('../common/footer.html');
 
-		 var noeIndex = 0;
-		 var type = window.location.search.split('=')[1];
-		 switch(type) {
-		 	case 'introduc':
-		 		noeIndex = 0;
-		 		break;
-		 	case 'advantage':
-		 		noeIndex = 1;
-		 		break
-		 	case 'dynamic':
-		 		noeIndex = 2;
-		 		break
-		 	case 'contact':
-		 		noeIndex = 3;
-		 		break
-		 }
+		 // var noIndex = 0;
+		 // var type = window.location.search.split('=')[1];
+		 // console.log(window.location)
+		 // switch(type) {
+		 // 	case 'introduc':
+		 // 		noIndex = 0;
+		 // 		break;
+		 // 	case 'advantage':
+		 // 		noIndex = 1;
+		 // 		break
+		 // 	case 'dynamic':
+		 // 		noIndex = 2;
+		 // 		break
+		 // 	case 'contact':
+		 // 		noIndex = 3;
+		 // 		break
+		 // }
 
-		 $('.colum-lists li').eq(noeIndex).addClass('active').siblings('li').removeClass('active');
-		 $('content').eq(noeIndex).removeClass('none').siblings('.content').addClass('none');
+		 // $('.colum-lists li').eq(noIndex).addClass('active').siblings('li').removeClass('active');
+		 // $('content').eq(noIndex).removeClass('none').siblings('.content').addClass('none');
 
 
 		 $('.colum-lists li').on('click',function() {

@@ -14,57 +14,57 @@
 					</div>
 					<div class="list-content clearfix">
 						<a href="/pages/aboutus.html?type=introduc">公司简介</a>
-						<a href="/pages/aboutus.html?type=introduc">公司优势</a>
-						<a href="/pages/aboutus.html?type=advantage">集团介绍</a>
+						<a href="/pages/aboutus.html?type=advantage">公司优势</a>
+						<a href="/pages/aboutus.html?type=group">集团介绍</a>
 						<a href="/pages/aboutus.html?type=dynamic">公告动态</a>
 						<a href="/pages/aboutus.html?type=contact">联系我们</a>
 					</div>	
 				</div>
 			</li>
-			<li>
+			<li class="product-link">
 				<a href="/pages/product.html" class="nav-name">产品服务</a>
 				<div class="product-list clearfix">
 					<div class="product-icon">
 						<img src="../images/header/server-icon.png">
 					</div>
 					<div class="product-content clearfix">
-						<a href="/pages/aboutus.html?type=introduc">交易细节</a>
-						<a href="/pages/aboutus.html?type=introduc">提取资金</a>
-						<a href="/pages/aboutus.html?type=advantage">条款细则</a>
-						<a href="/pages/aboutus.html?type=dynamic">开户指南</a>
-						<a href="/pages/aboutus.html?type=contact">平台下载</a>
-						<a href="/pages/aboutus.html?type=introduc">隐私条款</a>
-						<a href="/pages/aboutus.html?type=introduc">存入资金</a>
-						<a href="/pages/aboutus.html?type=advantage">争端处理</a>
-						<a href="/pages/aboutus.html?type=dynamic">Cookies</a>
+						<a href="/pages/product.html?type=details">交易细节</a>
+						<a href="/pages/product.html?type=capital">提取资金</a>
+						<a href="/pages/product.html?type=clause">条款细则</a>
+						<a href="/pages/product.html?type=account">开户指南</a>
+						<a href="/pages/product.html?type=download">平台下载</a>
+						<a href="/pages/product.html?type=privacy">隐私条款</a>
+						<a href="/pages/product.html?type=deposit">存入资金</a>
+						<a href="/pages/product.html?type=dispute">争端处理</a>
+						<a href="/pages/product.html?type=cookies">Cookies</a>
 					</div>	
 				</div>
 			</li>
-			<li>
+			<li class="college-link">
 				<a href="/pages/data.html" class="nav-name">文传学院</a>
 				<div class="college-list clearfix">
 					<div class="college-icon">
 						<img src="../images/header/college-icon.png">
 					</div>
 					<div class="college-content clearfix">
-						<a href="/pages/aboutus.html?type=introduc">教学指南</a>
-						<a href="/pages/aboutus.html?type=introduc">数据中心</a>
-						<a href="/pages/aboutus.html?type=advantage">实战技巧</a>
-						<a href="/pages/aboutus.html?type=dynamic">优惠活动</a>
+						<a href="/pages/data.html?type=teaching">教学指南</a>
+						<a href="/pages/data.html?type=data">数据中心</a>
+						<a href="/pages/data.html?type=skill">实战技巧</a>
+						<a href="/pages/data.html?type=discount">优惠活动</a>
 					</div>	
 				</div>
 			</li>
-			<li>
+			<li class="info-link">
 				<a href="/pages/information.html" class="nav-name">行情资讯</a>
 				<div class="info-list clearfix">
 					<div class="info-icon">
 						<img src="../images/header/info-icon.png">
 					</div>
 					<div class="info-content clearfix">
-						<a href="/pages/aboutus.html?type=introduc">热门资讯</a>
-						<a href="/pages/aboutus.html?type=introduc">专题资讯</a>
-						<a href="/pages/aboutus.html?type=advantage">专家评论</a>
-						<a href="/pages/aboutus.html?type=dynamic">财经日历</a>
+						<a href="/pages/information.html?type=hot">热门资讯</a>
+						<a href="/pages/information.html?type=special">专题资讯</a>
+						<a href="/pages/information.html?type=expert">专家评论</a>
+						<a href="/pages/information.html?type=calendar">财经日历</a>
 					</div>	
 				</div>
 			</li>
@@ -99,10 +99,19 @@
 			$(this).children('a').removeClass('on');
 		});
 
-		$('.about-link').hover(function() {
-			$('.about-list').show();
-		},function() {
-			$('.about-list').hide();
-		});
+
+		showDropdownBox('about-link');
+		showDropdownBox('product-link');
+		showDropdownBox('college-link');
+		showDropdownBox('info-link');
+
+		function showDropdownBox(name) {
+			var childName = name.split('-')[0];
+			$('.'+name ).hover(function() {
+				$('.'+childName+'-list').show();
+			},function() {
+				$('.'+childName+'-list').hide();
+			});
+		}
 	})
 </script>
