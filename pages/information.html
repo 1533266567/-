@@ -103,11 +103,11 @@
 				</li>
 			</ul>
 			<div class="page-wrap m-b-17">
-				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="font-arrow f-btn1"></a>
 				<a href="javascript:;" class="page on">1</a>
 				<a href="javascript:;" class="page">2</a>
 				<a href="javascript:;" class="page">3</a>
-				<a href="javascript:;" class="back-arrow"></a>
+				<a href="javascript:;" class="back-arrow b-btn1"></a>
 			</div>
 		</div>
 		<div class="content none">
@@ -166,11 +166,11 @@
 				</li>
 			</ul>
 			<div class="page-wrap">
-				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="font-arrow f-btn2"></a>
 				<a href="javascript:;" class="page on">1</a>
 				<a href="javascript:;" class="page">2</a>
 				<a href="javascript:;" class="page">3</a>
-				<a href="javascript:;" class="back-arrow"></a>
+				<a href="javascript:;" class="back-arrow b-btn2"></a>
 			</div>
 		</div>
 
@@ -254,11 +254,11 @@
 				</li>
 			</ul>
 			<div class="page-wrap m-b-17">
-				<a href="javascript:;" class="font-arrow"></a>
+				<a href="javascript:;" class="font-arrow f-btn3"></a>
 				<a href="javascript:;" class="page on">1</a>
 				<a href="javascript:;" class="page">2</a>
 				<a href="javascript:;" class="page">3</a>
-				<a href="javascript:;" class="back-arrow"></a>
+				<a href="javascript:;" class="back-arrow b-btn3"></a>
 			</div>
 		</div>
 
@@ -493,26 +493,28 @@
 		 	$(this).addClass('on').siblings('.page').removeClass('on');
 		 })
 		 var onIndex = 0;
-		 var len = $('.page').length;
-		 $('.back-arrow').on('click',function() {
-		 	
+		 $('.b-btn1,.b-btn2,.b-btn3').on('click',function() {
+		 	var len = $(this).siblings('.page').length;
+		 	var page = $(this).siblings('.page');
 		 	for(var i = 0; i < len; i++ ) {
-		 		if( $('.page').eq(i).hasClass('on') ) {
+		 		if( page.eq(i).hasClass('on') ) {
 		 			onIndex = i;
 		 		}
 		 	}
 		 	if( onIndex < 2 ) {
-		 		$('.page').eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
+		 		page.eq(onIndex+1).addClass('on').siblings('.page').removeClass('on');
 		 	}
 		 })
-		 $('.font-arrow').on('click',function() {
+		 $('.f-btn1,.f-btn2,.f-btn3').on('click',function() {
+		 	var page = $(this).siblings('.page');
+		 	var len = $(this).siblings('.page').length;
 		 	for(var i = 0; i < len; i++ ) {
-		 		if( $('.page').eq(i).hasClass('on') ) {
+		 		if( page.eq(i).hasClass('on') ) {
 		 			onIndex = i;
 		 		}
 		 	}
 		 	if( onIndex > 0 ) {
-		 		$('.page').eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
+		 		page.eq(onIndex-1).addClass('on').siblings('.page').removeClass('on');
 		 	}
 		 })
 
