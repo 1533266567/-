@@ -2137,17 +2137,17 @@ table {
 	margin: 0 20px;
 	border: 2px solid #fff;
 }
-table td {
+.rule td {
 	height: 60px;
 	font-size: 18px;
 	text-align: center;
 	background: #dbdbdb;
 	border: 2px solid #fff;
 }
-table .f5 {
+.rule .f5 {
 	background: #f5f5f5;
 }
-table .bge {
+.rule .bge {
 	background: #eee;
 }
 .decorate {
@@ -2414,7 +2414,7 @@ table .bge {
 .side-box {
 	position: fixed;
 	right: 0;
-	top: 130px;
+	top: 100px;
 }
 .side-box li {
 	width: 90px;
@@ -2438,7 +2438,79 @@ table .bge {
 	background: url(../images/server.png) no-repeat;
 	background-size: contain;
 }
+.weibo-link {
+	background: url(../images/weibo.png) no-repeat;
+	background-size: contain;
+}
 .back-link {
 	background: url(../images/backTop.png) no-repeat;
 	background-size: contain;
+}
+.bank {
+	width: 600px;
+	margin: 20px auto 270px;
+	background: #dbdbdb;
+}
+.bank td {
+	height: 60px;
+	font-size: 16px;
+	text-align: center;
+}
+.bank .bge {
+	background: #eee;
+}
+.bank .h80 {
+	height: 80px;
+}
+.dynamic-detail {
+	width: 100%;
+	margin-bottom: 819px;
+}
+.dynamic-detail h3 {
+	padding: 60px 0;
+	font-size: 26px;
+	text-align: center;
+}
+.dynamic-detail h6 {
+	padding-bottom: 60px;
+	font-size: 18px;
+	color: #999;
+	text-align: center;
+}
+.dynamic-detail p {
+	font-size: 18px;
+	padding-left: 58px;
+	padding-bottom: 20px;
+	line-height: 1.6;
+}
+.dynamic-detail .red {
+	color: #cd2c24
+}
+.dynamic-table {
+	margin: 10px 0 30px;
+}
+.dynamic-table li {
+	width: 602px;
+	margin: 0 auto;
+	font-size: 18px;
+	text-align: center;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+.dynamic-table li span {
+	display: block;
+	float: left;
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
+	border-top: 1px solid #999;
+}
+.dynamic-table .last {
+	border-bottom: 1px solid #999;
+}
+.dynamic-table .right {
+	border-right: 1px solid #999;
+}
+.dynamic-table .normal {
+	line-height: 1.6;
 }
