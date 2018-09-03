@@ -2415,6 +2415,7 @@ table {
 	position: fixed;
 	right: 0;
 	top: 100px;
+	z-index: 1000;
 }
 .side-box li {
 	width: 90px;
