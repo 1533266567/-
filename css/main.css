@@ -2011,6 +2011,10 @@ textarea::-webkit-input-placeholder {
 	width: 300px;
 	background: url(../images/middle-arrow.png) no-repeat;
 }
+.teaching-item .max {
+	width: 300px;
+	background: url(../images/large-arrow.png) no-repeat;
+}
 .teaching-item  p {
 	color: #333;
 	font-size: 16px;
@@ -2537,3 +2541,24 @@ table {
 .dynamic-table .normal {
 	line-height: 1.6;
 }
+.candles-list,
+.candles-list li{
+	width: 100%;
+}
+.candles-list li{
+	margin-bottom: 80px;
+}
+.candles-pic { 
+	float: left;
+	width: 200px;
+	height: 140px;
+}
+.candles-pic img {
+	display: block;
+	width: 100%;
+ }
+ .candles-content {
+ 	float: left;
+ 	width: 592px;
+ 	margin-left: 80px;
+ }
