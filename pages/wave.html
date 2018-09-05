@@ -18,10 +18,10 @@
 				</li>
 				<div class="detail-list">
 					<a href="javascript:;" class="on">波浪理论</a>
-					<a href="javascript:;">移动平均线</a>
-					<a href="javascript:;">图表形态</a>
-					<a href="javascript:;">阴阳烛</a>
-					<a href="javascript:;" >技术线之应用</a>
+					<a href="/pages/meanLine.html">移动平均线</a>
+					<a href="/pages/form.html">图表形态</a>
+					<a href="/pages/candleStick.html">阴阳烛</a>
+					<a href="/pages/technical.html" >技术线之应用</a>
 				</div>
 				<li><a href="/pages/data.html?type=data">数据中心</a></li>
 				<li><a href="/pages/data.html?type=discount">优惠活动</a></li>
@@ -47,7 +47,7 @@
 					<li>波浪比率及特征</li>
 				</ul>
 				<div class="teaching-content">
-					<div class="teaching-item none">
+					<div class="teaching-item">
 						<h4 class="large">波浪的形成</h4>
 						<p>波浪理论是尝试以大自然的定律来融入金融市场中，本质上是希望捉摸宏观的大自然韵律，应用在变化不定的微观走势中。由于市场的升降变化有如大海中的波浪，所以称之为波浪理论。基本理论是以五个上升浪称之为推动浪，而三个下跌浪则称为调整浪。此时市况称之为走了一个循环。</p>
 						<p>但深入研究，每一组大浪尚可分为很多组小浪，而小浪亦可分为迷你浪……而难度较高的，在一组完整浪中随时可额外杀出一个失败浪。</p>
@@ -180,7 +180,7 @@
 						<p style="margin-left: 25px;">1.618 x 1.618 = 2.618</p>
 						<p style="margin-left: 25px;">1 - 0.618 = 0.382</p>
 					</div>
-					<div class="teaching-item">
+					<div class="teaching-item none">
 						<h4 class="max">波浪比率及特征</h4>
 						<p>1. 第一浪只是推动浪开始；</p>
 						<p>2. 第二浪调整不能超过第一波浪起点；</p>
@@ -220,6 +220,7 @@
 		$('.theory li').on('click',function() {
 			var index = $(this).index();
 			$(this).addClass('on').siblings('li').removeClass('on');
+			$('.teaching-item').eq(index).removeClass('none').siblings('.teaching-item').addClass('none');
 		})
 	})
 	 
