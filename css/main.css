@@ -744,8 +744,8 @@ textarea::-webkit-input-placeholder {
 .colum-lists li,
 .download-list li {
 	width: 210px;
-	height: 78px;
-	line-height: 78px;
+	height: 65px;
+	line-height: 65px;
 	text-align: right;
 	border-bottom: 1px solid #e5e5e5;
 }
