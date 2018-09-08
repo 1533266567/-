@@ -53,7 +53,7 @@
 				<span class="colorR">75.482</span>
 			</li>
 		</ul>
-		<div class="character">
+		<!-- <div class="character">
 			<h2>文传优势</h2>
 			<ul class="clearfix">
 				<li>
@@ -81,7 +81,7 @@
 					<p>资金灵活</p>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 		<div class="quotation">
 			<h2>实时行情</h2>
 			<ul class="quotation-type clearfix">
@@ -243,6 +243,31 @@
 	<!-- 底部 -->
 	<div class="footer" id="footer"></div>
 
+	<div class="statement">
+		<h3 class="title">声明 
+			<a href="javascript:;" class="close js-close-state"></a>
+		</h3>
+		<div class="statement-content">致：尊贵的客户</div>
+	</div>
+	<div class="mask">
+		<div class="notice">	
+			<h3 class="title">公司公告 
+				<a href="javascript:;" class="close js-mask"></a>
+			</h3>
+			<div class="notice-content">
+				<h2>美国劳动节假期公告</h2>
+				<p>致：尊贵的客户</p>
+				<p style="text-indent: 2em;">我们收到交易商的通知，因2018年9月3日（星期一）为美国劳动节假期，本公司的贵金属交易时间将更改为：<em>照常开市，于1:00收市</em></p>
+				<p>
+					<em>*收市后，交易商会将所有未生成的限价单取消，敬请留意。</em>
+				</p>
+				<p>如有任何疑问，请与本公司24小时客服联系</p>
+				<span class="notice-time">2018年9月3日</span>
+			</div>
+		</div>
+	</div>
+	
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
@@ -272,6 +297,13 @@
 		$('.calendar-detail li').on('click',function() {
 		 	$(this).addClass('calendar-active').siblings('li')
 		 	.removeClass('calendar-active');
+		})
+
+		$('.js-mask').on('click',function() {
+			$('.mask').hide();
+		})
+		$('.js-close-state').on('click',function() {
+			$('.statement').hide();
 		})
 	})
 </script>

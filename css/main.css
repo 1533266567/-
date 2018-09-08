@@ -173,7 +173,7 @@ textarea::-webkit-input-placeholder {
 }
 .nav-bar {
 	width: 960px;
-	padding-left: 40px;
+	padding-left: 30px;
 	margin: 0 auto;
 }
 .nav-bar ul {
@@ -191,32 +191,63 @@ textarea::-webkit-input-placeholder {
 }
 .nav-bar li > a  {
 	display: block;
-	width: 100%;
+	width: 130px;
+	height: 60px;
 	position: relative;
 	color: #333;
-	font-size: 22px;
-	line-height: 110px;
+	font-size: 20px;
+	line-height: 60px;
 	text-align: center;
+	margin-top: 25px;
 }
 .nav-bar .on {
-	background: #cd2c24;
-	color: #fff;
+	background: #fff;
+	color: #cd2c24;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow:  2px 2px 6px 3px #e5e5e5; 
+	-webkit-box-shadow:  2px 2px 6px 3px #e5e5e5; 
+	box-shadow:  2px 2px 6px 3px #e5e5e5; 
 }
-.about-link {
+.about-link,
+.product-link,
+.college-link,
+.info-link {
 	position: relative;
 }
 .about-list,
 .college-list,
-.info-list {
+.info-list,
+.product-list {
 	display: none;
 	position: absolute;
-	width: 460px;
-	height: 180px;
-	background: #fff;
-	-moz-box-shadow: 1px 1px 2px 3px #eee; 
+	left: -2px;
+	width: 180px;
+	height: auto;
+	margin-top: 28px;
+	background: #cd2c24;
+	opacity: 0.8;
+	/*-moz-box-shadow: 1px 1px 2px 3px #eee; 
 	-webkit-box-shadow: 1px 1px 2px 3px #eee;
-	box-shadow: 1px 1px 2px 3px #eee;
+	box-shadow: 1px 1px 2px 3px #eee;*/
 	z-index: 1000;
+}
+.about-list :before,
+.product-list :before,
+.college-list :before,
+.info-list :before {
+	content: '';
+	position: absolute;
+	left: 76px;
+	top: -31px;
+	width: 0px;
+	height: 0px;
+	border: 14px solid transparent;
+	border-left-width: 12px;
+	border-right-width: 12px;
+	border-bottom: 20px solid #cd2c24;
+
 }
 .list-icon,
 .product-icon,
@@ -236,34 +267,21 @@ textarea::-webkit-input-placeholder {
 }
 .list-content,
 .college-content,
-.info-content {
-	float: left;
-	width: 283px;
-	height: 180px;
-	padding-top: 40px;
-	padding-left: 40px;
+.info-content,
+.product-content  {
+	width: 100%;
 }
 .list-content  a,
 .product-content a,
 .college-content a,
 .info-content a {
 	display: block;
-	float: left;
-	padding-right: 40px;
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
 	font-size: 18px;
-	color: #333;
-	padding-bottom: 20px;
-}
-.product-list {
-	display: none;
-	width: 560px;
-	height: 180px;
-	position: absolute;
-	background: #fff;
-	-moz-box-shadow: 1px 1px 2px 3px #eee; 
-	-webkit-box-shadow: 1px 1px 2px 3px #eee;
-	box-shadow: 1px 1px 2px 3px #eee;
-	z-index: 1000;
+	color: #fff;
 }
 .product-icon img{
 	display: block;
@@ -272,23 +290,12 @@ textarea::-webkit-input-placeholder {
 	margin: 0 auto;
 	margin-top: 55px;
 }
-.product-content {
-	float: left;
-	width: 383px;
-	height: 180px;
-	padding-top: 40px;
-	padding-left: 40px;
-}
 .college-icon img {
 	display: block;
 	width: 88px;
 	height: 67px;
 	margin: 0 auto;
 	margin-top: 63px;
-}
-.college-content,
-.info-content {
-	padding-top: 88px;
 }
 .info-icon img {
 	display: block;
@@ -301,7 +308,7 @@ textarea::-webkit-input-placeholder {
 .product-list a:hover,
 .college-list a:hover,
 .info-list a:hover {
-	color:#f00f12;
+	font-size: 20px;
 }
 .account {
 	position: absolute;
@@ -351,7 +358,7 @@ textarea::-webkit-input-placeholder {
 .main h2 {
 	width: 100%;
 	text-align: center;
-	font-size: 32px;
+	font-size: 36px;
 	color: #cc2e37;
 }
 .download-pic {
@@ -377,13 +384,13 @@ textarea::-webkit-input-placeholder {
 .download-link {
 	display: block;
 	margin: 50px auto;
-	width: 380px;
-	height: 75px;
+	width: 285px;
+	height: 65px;
 	border: 2px solid #cd2c24;
 	color: #ce3840;
-	font-size: 28px;
+	font-size: 22px;
 	text-align: center;
-	line-height: 75px;
+	line-height: 65px;
 	-webkit-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -422,7 +429,7 @@ textarea::-webkit-input-placeholder {
 .calendar-title > h3,
 .hot-info-title > h3 {
 	color: #1e559f;
-	font-size: 26px;
+	font-size: 24px;
 }
 .calendar-detail {
 	margin-top: 38px;
@@ -438,7 +445,7 @@ textarea::-webkit-input-placeholder {
 	width: 100%;
 	display: block;
 	text-align: center; 
-	font-size: 18px;
+	font-size: 16px;
 }
 .calendar-detail .calendar-active {
 	border-bottom: 2px solid #cc2e37;
@@ -519,7 +526,7 @@ textarea::-webkit-input-placeholder {
 .hot-info-detail {
 	width: 68%;
 	color: #333;
-	font-size: 20px;
+	font-size: 19px;
 }
 .hot-info-detail > p {
 	width: 100%;
@@ -551,7 +558,7 @@ textarea::-webkit-input-placeholder {
 }
 .footer-inline h4 {
 	color: #fff;
-	font-size: 28px;
+	font-size: 22px;
 }
 .tip {
 	width: 45%;
@@ -567,7 +574,7 @@ textarea::-webkit-input-placeholder {
 	background-size: contain;
 	position: absolute;
 	left: 13px;
-	top: 6px;  
+	top: 1px;  
 }
 .customer-icon {
 	display: inline-block;
@@ -592,7 +599,7 @@ textarea::-webkit-input-placeholder {
 .tip > p {
 	margin-top: 10px;
 	color: #fff;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 2;
 }
 .notes {
@@ -607,12 +614,12 @@ textarea::-webkit-input-placeholder {
 .notes li a {
 	display: block;
 	color: #fff;
-	font-size: 16px;
+	font-size: 15px;
 	padding-bottom: 20px;
 }
 .contact li {
 	color: #fff;
-	font-size: 16px;
+	font-size: 15px;
 	padding-bottom: 20px;
 	width: 220px;
 }
@@ -634,7 +641,7 @@ textarea::-webkit-input-placeholder {
 .quotation-type li {
 	float: left;
 	width: 20%;
-	font-size: 22px;
+	font-size: 20px;
 	color: #999;
 	height: 66px;
 	line-height: 66px;
@@ -642,17 +649,16 @@ textarea::-webkit-input-placeholder {
 	cursor: pointer;
 }
 .quotation-type .active {
-	color: #002e40;
+	color: #1e559f;
 	position: relative;
 }
 .quotation-type .active::after {
-	color: #002e40;
 	left: 0;
 	bottom: 0;
 	content: '';
 	width: 100%;
 	position: absolute;
-	background: #002e40;
+	background: #1e559f;
 	height: 2px;
 }
 .data-range {
@@ -705,7 +711,7 @@ textarea::-webkit-input-placeholder {
 	position: relative;
 }
 .marquee li {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 40px;
 	display: inline-block;
 	margin-left: 10px;
@@ -737,7 +743,7 @@ textarea::-webkit-input-placeholder {
 }
 .colum-lists li,
 .download-list li {
-	width: 240px;
+	width: 210px;
 	height: 78px;
 	line-height: 78px;
 	text-align: right;
@@ -746,7 +752,7 @@ textarea::-webkit-input-placeholder {
 .colum-lists li>a,
 .download-list li a {
 	color: #333;
-	font-size: 22px;
+	font-size: 18px;
 	width: 100%;
 	display: block;
 	padding-right: 50px;
@@ -806,7 +812,7 @@ textarea::-webkit-input-placeholder {
 	position: relative;
 }
 .content h2 {
-	font-size: 36px;
+	font-size: 30px;
 	color: #333;
 	padding-top: 50px;
 	padding-bottom: 30px;
@@ -828,7 +834,7 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 277px;
 }
 .content-word p {
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 2.4;
 	text-indent: 2em;
 }
@@ -859,9 +865,9 @@ textarea::-webkit-input-placeholder {
 .dynamic-link {
 	float: left;
 	display: block;
-	height: 80px;
-	line-height: 80px;
-	font-size: 20px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 16px;
 	color: #333;
 }
 .dynamic-time {
@@ -869,7 +875,7 @@ textarea::-webkit-input-placeholder {
 	display: block;
 	height: 80px;
 	line-height: 80px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #999
 }
 .news-top .dynamic-link {
@@ -1009,7 +1015,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .page-wrap .page {
-	font-size: 24px;
+	font-size: 20px;
 	margin: 0 10px;
 	color: #1e559f;
 }
@@ -1026,7 +1032,7 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 83px;
 }
 .skill-content {
-	padding: 40px 0 40px 20px;
+	padding: 32px 0 32px 20px;
 	border-top: 1px solid #e5e5e5; 
 	border-bottom: 1px solid #e5e5e5; 
 }
@@ -1052,15 +1058,16 @@ textarea::-webkit-input-placeholder {
 }
 .skill-word h5 {
 	width: 100%;
-	font-size: 22px;
+	font-size: 18px;
 	color: #333;
 	padding-bottom: 10px;
 }
 .skill-word p {
 	width: 100%;
-	font-size: 18px;
+	font-size: 14px;
 	color: #999;
 	text-indent: 2em;
+	line-height: 1.6;
 	
 	display: -webkit-box;
 	text-overflow: ellipsis;
@@ -1113,7 +1120,7 @@ textarea::-webkit-input-placeholder {
 	text-align: center;
 	line-height: 45px;
 	color: #999;
-	font-size: 22px;
+	font-size: 20px;
 	cursor: pointer;
 }
 .real-nav .on {
@@ -1139,7 +1146,7 @@ textarea::-webkit-input-placeholder {
 .offer-item em {
 	float: left;
 	color: #333;
-	font-size: 22px;
+	font-size: 20px;
 	margin-right: 30px;
 	width: 79px;
 	text-align: center;
@@ -1150,12 +1157,12 @@ textarea::-webkit-input-placeholder {
 	padding-bottom: 22px;
 }
 .offer-detail  .o-d-text {
-	font-size: 22px;
+	font-size: 20px;
 	color: #999;
 	padding-right: 10px;
 }
 .o-d-number {
-	font-size: 32px;
+	font-size: 28px;
 	color: #22ac38;
 	position: relative;
 	padding-right: 40px;
@@ -1186,7 +1193,7 @@ textarea::-webkit-input-placeholder {
 .compare-name {
 	float: left;
 	width: 79px;
-	font-size: 22px;
+	font-size: 20px;
 	text-align: center;
 	margin-right: 30px;
 }
@@ -1249,14 +1256,14 @@ textarea::-webkit-input-placeholder {
 	text-indent: 2em;
 }
 .skill-word .info-title {
-	font-size: 22px;
+	font-size: 18px;
 }
 .info-item {
-	padding: 40px 0 50px 20px;
+	padding: 30px 0 30px 20px;
 	position: relative;
 }
 .read-all {
-	font-size: 18px;
+	font-size: 16px;
 	color: #cd2c24;
 	position: absolute;
 	right: 10px;
@@ -1282,7 +1289,7 @@ textarea::-webkit-input-placeholder {
 	background: url(../images/lignhtArrow.png) no-repeat;
 	background-size: contain;
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
 	padding-left: 39px;
 	line-height: 61px;
 	margin-bottom: 10px;
@@ -1324,7 +1331,7 @@ textarea::-webkit-input-placeholder {
 }
 .expert-name {
 	display: block;
-	font-size: 25px;
+	font-size: 20px;
 	color: #333;
 	text-align: center;
 	width: 100%;
@@ -1332,7 +1339,7 @@ textarea::-webkit-input-placeholder {
 }
 .expert-call {
 	display: block;
-	font-size: 18px;
+	font-size: 16px;
 	color: #999;
 	text-align: center;
 	width: 100%;
@@ -1385,20 +1392,20 @@ textarea::-webkit-input-placeholder {
 	width: 100%;
 }
 .comment li {
-	height: 78px;
+	height: 65px;
 	width: 100%;
-	line-height: 78px;
+	line-height: 65px;
 	border-bottom: 2px solid #e5e5e5;
 }
 .comment li>a {
 	float: left;
-	font-size: 22px;
+	font-size: 16px;
 	color: #333;
 }
 .comment .time {
 	float: right;
 	color: #999;
-	font-size: 16px;
+	font-size: 14px;
 }
 .calendar-container {
 	width: 100%;
@@ -1457,7 +1464,7 @@ textarea::-webkit-input-placeholder {
 	text-align: center; 
 }
 .finance-week  {
-	margin-bottom: 19px;
+	margin-bottom: 15px;
 }
 .calendar-container .on {
 	border-bottom: 4px solid #cc2e37;
@@ -1467,7 +1474,7 @@ textarea::-webkit-input-placeholder {
 	color: #cc2e37;
 }
 .finance-main {
-	padding-top: 70px;
+	padding-top: 60px;
 	width: 100%;
 	position: relative;
 	margin-bottom: 740px;
@@ -1498,8 +1505,8 @@ textarea::-webkit-input-placeholder {
 .finance-text {
 	float: left;
 	color: #3d7f99;
-	font-size: 22px;
-	padding-right: 50px;
+	font-size: 18px;
+	padding-right: 105px;
 }
 .finance-star {
 	float: left;
@@ -1519,7 +1526,7 @@ textarea::-webkit-input-placeholder {
 .finance-val,
 .publish-val{
 	float: left;
-	font-size: 22px;
+	font-size: 18px;
 	color: #333;
 }
 .finance-val {
@@ -1528,11 +1535,11 @@ textarea::-webkit-input-placeholder {
 }
 .parame {
 	position: absolute;
-	right: 22px;
+	right: 35px;
 	top: 20px;
 }
 .parame span {
-	font-size: 22px;
+	font-size: 18px;
 	color: #666;
 	padding-right: 60px;
 }
@@ -1566,9 +1573,9 @@ textarea::-webkit-input-placeholder {
 }
 .clause-btn li {
 	float: left;
-	padding: 20px 25px;
+	padding: 16px 22px;
 	color: #bfbfbf;
-	font-size: 22px;
+	font-size: 18px;
 	text-align: center;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -1594,13 +1601,13 @@ textarea::-webkit-input-placeholder {
 	margin-bottom: 10px;
 }
 .clause-content p {
-	font-size: 16px;
+	font-size: 14px;
 	color: #333;
 	text-indent: 2em;
 	line-height: 2;
 }
 .clause-content h5 {
-	font-size: 20px;
+	font-size: 18px;
 	padding: 10px 0;
 }
 
@@ -1799,7 +1806,7 @@ textarea::-webkit-input-placeholder {
 	margin: 0 auto;
 	width: 340px;
 	height: 80px;
-	font-size: 30px;
+	font-size: 24px;
 	color: #cd2c24;
 	line-height: 80px;
 	padding-left: 68px;
@@ -1820,14 +1827,14 @@ textarea::-webkit-input-placeholder {
 	top: 18px;
 }
 .extract p {
-	font-size: 16px;
+	font-size: 14px;
 	color: #333333;
 	margin-bottom: 20px;
 	padding-left: 40px;
 	width: 100%;
 }
 .pay-btn li {
-	padding: 20px 30px;
+	padding: 16px 22px;
 }
 .dispute {
 	width: 100%;
@@ -1843,7 +1850,7 @@ textarea::-webkit-input-placeholder {
 	background: url(../images/lignhtArrow.png) no-repeat;
 	background-size: contain;
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 30px;
 	line-height: 61px;
 	padding-left: 39px;
@@ -1852,7 +1859,7 @@ textarea::-webkit-input-placeholder {
 		background: url(../images/smallArrow.png) no-repeat;
 }
 .dispute-item p {
-	font-size: 16px;
+	font-size: 14px;
 	text-indent: 2em;
 	line-height: 40px;
 	color: #333;
@@ -1924,7 +1931,7 @@ textarea::-webkit-input-placeholder {
 	padding-top: 30px;
 }
 .guide-step p {
-	font-size: 18px;
+	font-size: 14px;
 	color: #333;
 	padding-bottom: 30px;
 }
@@ -1988,7 +1995,7 @@ textarea::-webkit-input-placeholder {
 	border: solid 2px #999;
 	color: #999;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 }
 .teaching-content {
 	width: 100%;
@@ -2004,7 +2011,7 @@ textarea::-webkit-input-placeholder {
 	padding-left: 40px;
 	color: #fff;
 	line-height: 61px;
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 30px;
 }
 .teaching-item .large {
@@ -2015,19 +2022,19 @@ textarea::-webkit-input-placeholder {
 	width: 300px;
 	background: url(../images/large-arrow.png) no-repeat;
 }
-.teaching-item  p {
+.teaching-item p {
 	color: #333;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 2.2;
 	text-indent: 2em;
 }
 .teaching-item  h6 {
-	font-size: 20px;
+	font-size: 18px;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
 .teaching-item  h5 {
-	font-size: 20px;
+	font-size: 18px;
 	padding: 10px 0;
 }
 .publicity-pic {
@@ -2076,7 +2083,7 @@ textarea::-webkit-input-placeholder {
 	float: left;
 }
 .advantage-content h4 {
-	font-size: 24px;
+	font-size: 20px;
 	color: #1e559f;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
@@ -2094,14 +2101,14 @@ textarea::-webkit-input-placeholder {
 .trade-btn li {
 	float: left;
 	margin-right: 20px;
-	padding: 20px 30px;
+	padding: 16px 22px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;border-radius: 8px;
 	border-radius: 8px;
 	border: solid 2px #999;
 	color: #999;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 }
 .trade-btn li:last-child {
 	margin-right: 0;
@@ -2129,7 +2136,7 @@ textarea::-webkit-input-placeholder {
 	padding-left: 40px;
 	color: #fff;
 	line-height: 61px;
-	font-size: 24px;
+	font-size: 20px;
 	margin-bottom: 30px;
 }
 .trade-item .small {
@@ -2147,15 +2154,15 @@ textarea::-webkit-input-placeholder {
 	width: 350px;
 	background: url(../images/max-arrow.png) no-repeat;
 }
-.trade-item  p {
+.trade-item p {
 	color: #333;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 2.2;
 	text-indent: 2em;
 }
 .trade-item  h5 {
 	color: #333;
-	font-size: 22px;
+	font-size: 16px;
 	padding: 10px 0;
 }
 table {
@@ -2181,16 +2188,16 @@ table {
 	padding: 20px 30px;
 }
 .article-detail {
-	padding-top: 100px;
+	padding-top: 70px;
 	border-bottom: 2px solid #e5e5e5;
 }
 .article-detail h3 {
-	font-size: 26px;
+	font-size: 22px;
 	text-align: center;
 }
 .article-detail p {
 	text-indent: 2em;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 2.2;
 }
 .detail-pic {
@@ -2204,13 +2211,13 @@ table {
 .article-detail .time {
 	display: block;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	color: #999;
-	padding: 60px 0;
+	padding: 50px 0;
 }
 .article-detail  .source {
 	text-align: right;
-	padding: 80px 0 90px;
+	padding: 60px 0 70px;
 }
 .other-news {
 	padding-bottom: 119px;
@@ -2220,7 +2227,7 @@ table {
 	display: block;
 	padding-top: 30px;
 	color: #cd2c24;
-	font-size: 22px;
+	font-size: 18px;
 }
 .skill-detail {
 	padding-bottom: 224px;
@@ -2246,8 +2253,8 @@ table {
 	margin: 0 auto;
 }
 .character h2 {
-	margin-top: 100px;
-	margin-bottom: 40px;
+	margin-top: 80px;
+	margin-bottom: 45px;
 }
 .character ul {
 	width: 100%;
@@ -2270,7 +2277,7 @@ table {
 	width: 100%;
 }
 .character li>p {
-	font-size: 24px;
+	font-size: 22px;
 	color: #1e559f;
 	text-align: center;
 	width: 100%;
@@ -2303,10 +2310,10 @@ table {
 .platform-main {
 	padding-top: 30px;
 }
-.platform-main  h2 {
+.platform-main h2 {
 	padding: 60px 0px;
 	color: #cd2c24;
-	font-size: 36px;
+	font-size: 30px;
 	text-align: center;
 }
 .platform-pic {
@@ -2320,20 +2327,20 @@ table {
 	display: block;
 }
 .platform-main p {
-	font-size: 18px;
+	font-size: 15px;
 	color: #333;
 	line-height: 2;
 	text-indent: 2em;
 }
 .platform-main h3 {
 	color: #cd2c24;
-	font-size: 22px;
+	font-size: 18px;
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
 .download-code {
 	margin-top: 60px;
-	margin-left: 60px;
+	margin-left: 110px;
 	margin-bottom: 255px;
 }
 .download-code li {
@@ -2346,16 +2353,17 @@ table {
 }
 .download-code a {
 	display: block;
-	width: 200px;
-	height: 60px;
+	width: 160px;
+	height: 45px;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	border: 2px solid  #cd2c24;
 	color: #cd2c24;
-	font-size: 22px;
+	font-size: 16px;
 	text-align: center;
-	line-height: 60px;
+	line-height: 45px;
+	margin: 0 auto;
 	margin-top: 40px;
 }
 .download-code a:hover {
@@ -2369,14 +2377,14 @@ table {
 .code-pic-win {
 	margin: 0 auto;
 	margin-top: 20px;
-	width: 148px;
-	height: 149px;
+	width: 128px;
+	height: 129px;
 }
 .code-pic-ios,
 .code-pic-and {
 	margin: 0 auto;
-	width: 180px;
-	height: 180px;
+	width: 160px;
+	height: 160px;
 }
 .code-pic-win img,
 .code-pic-ios img,
@@ -2391,7 +2399,7 @@ table {
 	width: 950px;
 	height: 300px;
 	margin: 0 auto;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 .table-banner img {
 	display: block;
@@ -2400,7 +2408,7 @@ table {
 .table-content h2 {
 	width: 950px;
 	margin: 0 auto;
-	font-size: 36px;
+	font-size: 30px;
 	color: #333333;
 	padding-left: 20px;
 	padding-bottom: 20px;
@@ -2409,13 +2417,13 @@ table {
 .table-list li {
 	width: 950px;
 	margin:0 auto;
-	height: 80px;
-	line-height: 80px;
+	height: 70px;
+	line-height: 70px;
 	padding-left: 10px;
 	border-bottom: 2px solid #e5e5e5;
 }
 .table-list li>p {
-	font-size: 20px;
+	font-size: 16px;
 	color: #333;
 	float: left;
 }
@@ -2431,7 +2439,7 @@ table {
 	margin-right: 30px;
 }
 .table-time {
-	font-size: 16px;
+	font-size: 14px;
 	color: #999;
 }
 .table-bottom {
@@ -2572,4 +2580,90 @@ table {
 	font-size: 16px;
 	color: #333;
 	margin-bottom: 20px;
+}
+.mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 9999;
+}
+.notice {
+	position: absolute;
+	width: 950px;
+	height: 300px;
+	left: 50%;
+	margin-left: -475px;
+	top: 230px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+.notice .title,
+.statement .title {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 22px;
+	color: #fff;
+	position: relative;
+	background: -moz-linear-gradient(left,#f2826a, #cd2c24);
+	background: -webkit-linear-gradient(left,#f2826a, #cd2c24);
+	background: linear-gradient(left,#f2826a, #cd2c24);
+}
+.notice-content {
+	padding: 20px 50px 30px;
+	background: #fff;
+}
+.notice-content h2 {
+	font-size: 28px;
+	color: #333;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.notice-content p {
+	font-size: 14px;
+	line-height: 1.8;
+}
+.notice-content em {
+	color: #cd2c24;
+	font-size: 14px;
+}
+.notice-time {
+	display: block;
+	width: 100%;
+	padding-top: 20px;
+	text-align: right;
+}
+.close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 20px;
+	height: 20px;
+	background: url(../images/close.png) no-repeat;
+	background-size: contain;
+	z-index: 100;
+}
+.statement {
+	position: fixed;
+	left: 0;
+	top: 300px;
+	width: 400px;
+	height: 300px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	z-index: 8888;
+	border:1px solid #bfbfbf;
+}
+.statement-content {
+	padding: 20px 30px;
+	background: #fff;
+	font-size: 15px;
+	height: 240px;
 }
