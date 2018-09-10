@@ -225,28 +225,26 @@ textarea::-webkit-input-placeholder {
 	left: -2px;
 	width: 180px;
 	height: auto;
-	margin-top: 28px;
-	background: #cd2c24;
-	opacity: 0.8;
+	overflow:hidden;
 	/*-moz-box-shadow: 1px 1px 2px 3px #eee; 
 	-webkit-box-shadow: 1px 1px 2px 3px #eee;
 	box-shadow: 1px 1px 2px 3px #eee;*/
 	z-index: 1000;
 }
-.about-list :before,
-.product-list :before,
-.college-list :before,
-.info-list :before {
+.about-list:before,
+.product-list:before,
+.college-list:before,
+.info-list:before {
 	content: '';
 	position: absolute;
 	left: 76px;
-	top: -31px;
+	top: -6px;
 	width: 0px;
 	height: 0px;
 	border: 14px solid transparent;
 	border-left-width: 12px;
 	border-right-width: 12px;
-	border-bottom: 20px solid #cd2c24;
+	border-bottom: 20px solid rgba(215,86,80,1);
 
 }
 .list-icon,
@@ -270,6 +268,8 @@ textarea::-webkit-input-placeholder {
 .info-content,
 .product-content  {
 	width: 100%;
+	background: rgba(205,44,36,0.8);
+	margin-top: 28px;
 }
 .list-content  a,
 .product-content a,
@@ -308,7 +308,8 @@ textarea::-webkit-input-placeholder {
 .product-list a:hover,
 .college-list a:hover,
 .info-list a:hover {
-	font-size: 20px;
+	background: #cd2c24;
+	opacity: 1;
 }
 .account {
 	position: absolute;
@@ -740,6 +741,7 @@ textarea::-webkit-input-placeholder {
 }
 .colum-lists {
 	border-top: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
 }
 .colum-lists li,
 .download-list li {
@@ -774,6 +776,7 @@ textarea::-webkit-input-placeholder {
 }
 .download-list {
 	margin-top: 30px;
+	border-right: 1px solid #e5e5e5;
 }
 .download-list li:first-child {
 	height: 60px;
